@@ -4,3 +4,9 @@ C:\Users\Bob Tabor\documents\visual studio 2013\Projects\CS-ASP_011\CS-ASP_011\b
 C:\Users\Bob Tabor\documents\visual studio 2013\Projects\CS-ASP_011\CS-ASP_011\obj\Debug\CS-ASP_011.csprojResolveAssemblyReference.cache
 C:\Users\Bob Tabor\documents\visual studio 2013\Projects\CS-ASP_011\CS-ASP_011\obj\Debug\CS-ASP_011.dll
 C:\Users\Bob Tabor\documents\visual studio 2013\Projects\CS-ASP_011\CS-ASP_011\obj\Debug\CS-ASP_011.pdb
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge3_Button_C#_DevU\CS-ASP_011_Else-Ternary\CS-ASP_011\CS-ASP_011\bin\CS-ASP_011.dll.config
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge3_Button_C#_DevU\CS-ASP_011_Else-Ternary\CS-ASP_011\CS-ASP_011\bin\CS-ASP_011.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge3_Button_C#_DevU\CS-ASP_011_Else-Ternary\CS-ASP_011\CS-ASP_011\bin\CS-ASP_011.pdb
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge3_Button_C#_DevU\CS-ASP_011_Else-Ternary\CS-ASP_011\CS-ASP_011\obj\Debug\CS-ASP_011.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge3_Button_C#_DevU\CS-ASP_011_Else-Ternary\CS-ASP_011\CS-ASP_011\obj\Debug\CS-ASP_011.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge3_Button_C#_DevU\CS-ASP_011_Else-Ternary\CS-ASP_011\CS-ASP_011\obj\Debug\CS-ASP_011.pdb

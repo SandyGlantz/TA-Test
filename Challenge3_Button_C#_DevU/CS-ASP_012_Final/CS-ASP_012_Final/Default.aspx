@@ -56,15 +56,15 @@
         </p>
         <p class="auto-style3">
             &nbsp;
-            <asp:ImageButton ID="pencilImageButton" runat="server" Height="200px" ImageUrl="~/pencil.png" Visible="False" Width="75px" />
-            <asp:ImageButton ID="penImageButton" runat="server" Height="185px" ImageUrl="~/pen.png" Visible="False" Width="75px" />
+            <asp:ImageButton ID="pencilImageButton" runat="server" Height="175px" ImageUrl="~/pencil.png" Visible="False" Width="125px" />
+            <asp:ImageButton ID="penImageButton" runat="server" Height="175px" ImageUrl="~/pen.png" Visible="False" Width="140px" />
             <asp:ImageButton ID="iphoneImageButton" runat="server" Height="145px" ImageUrl="~/phone.png" Visible="False" Width="140px" />
-            <asp:ImageButton ID="ipadImageButton" runat="server" Height="175px" ImageUrl="~/tablet.png" Visible="False" Width="250px" />
+            <asp:ImageButton ID="ipadImageButton" runat="server" Height="175px" ImageUrl="~/tablet.png" Visible="False" Width="220px" />
         </p>
         <p class="auto-style3">
             &nbsp;</p>
         <p class="auto-style3">
-            <asp:Image ID="resultImage" runat="server" Visible="False" />
+            <asp:Image ID="resultImage" runat="server" Visible="False" Height="250px" Width="250px" />
         </p>
         <p class="auto-style6">
             &nbsp;</p>

@@ -110,5 +110,14 @@ namespace CS_ASP_012_Final {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ipadImageButton;
+        
+        /// <summary>
+        /// resultImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image resultImage;
     }
 }

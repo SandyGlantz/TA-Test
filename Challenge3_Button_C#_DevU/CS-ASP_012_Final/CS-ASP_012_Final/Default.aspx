@@ -61,6 +61,11 @@
             <asp:ImageButton ID="iphoneImageButton" runat="server" Height="145px" ImageUrl="~/phone.png" Visible="False" Width="140px" />
             <asp:ImageButton ID="ipadImageButton" runat="server" Height="175px" ImageUrl="~/tablet.png" Visible="False" Width="250px" />
         </p>
+        <p class="auto-style3">
+            &nbsp;</p>
+        <p class="auto-style3">
+            <asp:Image ID="resultImage" runat="server" Visible="False" />
+        </p>
         <p class="auto-style6">
             &nbsp;</p>
         <p class="auto-style3">

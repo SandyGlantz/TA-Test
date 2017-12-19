@@ -26,6 +26,7 @@ namespace CS_ASP_012_Final
             ipadImageButton.Visible = false;
 
 
+
             if (pencilRadioButton.Checked)
             {  resultLabel.Text = "You picked Pencil and paper.  ";
                 pencilImageButton.Visible = true;  }
@@ -47,6 +48,17 @@ namespace CS_ASP_012_Final
             {  resultLabel.Text = 
               "Please choose one - even if you take notes in your head.  ";
             }
+
+            // ========= Instructor solution notes  ========= 
+            /*
+            
+
+
+
+
+            */
+
+
 
         }
     }

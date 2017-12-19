@@ -13,5 +13,41 @@ namespace CS_ASP_012_Final
         {
 
         }
+
+        protected void okButton_Click(object sender, EventArgs e)
+        {
+
+
+
+            resultLabel.Text = "";
+            pencilImageButton.Visible = false;
+            penImageButton.Visible = false;
+            iphoneImageButton.Visible = false;
+            ipadImageButton.Visible = false;
+
+
+            if (pencilRadioButton.Checked)
+            {  resultLabel.Text = "You picked Pencil and paper.  ";
+                pencilImageButton.Visible = true;  }
+
+            else if (penRadioButton.Checked)
+            {  resultLabel.Text = "You picked Pen and paper.  ";
+                penImageButton.Visible = true;  }
+
+            else if (iphoneRadioButton.Checked)
+            {  resultLabel.Text = "You picked the iPhone :-)  ";
+                iphoneImageButton.Visible = true;  }
+
+            else if (ipadRadioButton.Checked)
+            {  resultLabel.Text = "You picked the iPad :-)  ";
+                ipadImageButton.Visible = true;  }
+
+
+            else 
+            {  resultLabel.Text = 
+              "Please choose one - even if you take notes in your head.  ";
+            }
+
+        }
     }
 }

@@ -106,10 +106,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\pen.png" />
-    <Content Include="App_Data\pencil.png" />
-    <Content Include="App_Data\phone.png" />
-    <Content Include="App_Data\tablet.png" />
+    <Content Include="pen.png" />
+    <Content Include="pencil.png" />
+    <Content Include="phone.png" />
+    <Content Include="tablet.png" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
@@ -130,6 +130,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

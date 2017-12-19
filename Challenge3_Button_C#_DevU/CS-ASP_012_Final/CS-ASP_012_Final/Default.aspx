@@ -20,11 +20,7 @@
             font-size: large;
             margin-left: 80px;
         }
-        .auto-style7 {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: xx-large;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -37,10 +33,8 @@
         </div>
         <p class="auto-style1">
             <strong>What is your preference for taking notes?:</strong></p>
-        <p class="auto-style1">
-            &nbsp;</p>
         <p class="auto-style3">
-            <asp:RadioButton ID="pencilRadioButton" runat="server" CssClass="auto-style4" GroupName="deviceGroup" OnCheckedChanged="RadioButton2_CheckedChanged" style="font-family: Arial, Helvetica, sans-serif; font-size: large" Text="  Pencil &amp; paper " />
+            <asp:RadioButton ID="pencilRadioButton" runat="server" CssClass="auto-style4" GroupName="deviceGroup" style="font-family: Arial, Helvetica, sans-serif; font-size: large" Text="  Pencil &amp; paper " />
         </p>
         <p class="auto-style3">
             <asp:RadioButton ID="penRadioButton" runat="server" CssClass="auto-style4" GroupName="deviceGroup" style="font-family: Arial, Helvetica, sans-serif; font-size: large" Text="  Pen &amp; paper  " />
@@ -54,19 +48,20 @@
         <p class="auto-style6">
             &nbsp;</p>
         <p class="auto-style3">
-            <asp:Button ID="okButton" runat="server" CssClass="auto-style4" style="font-family: Arial, Helvetica, sans-serif; font-size: large" Text="Click for Result" />
+            <asp:Button ID="okButton" runat="server" CssClass="auto-style4" style="font-family: Arial, Helvetica, sans-serif; font-size: large" Text="Click for Result" OnClick="okButton_Click" />
         </p>
-        <p class="auto-style6">
-            &nbsp;</p>
         <p class="auto-style3">
             <asp:Label ID="resultLabel" runat="server" CssClass="auto-style4" style="font-family: Arial, Helvetica, sans-serif; font-size: large"></asp:Label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+        <p class="auto-style3">
+            &nbsp;
+            <asp:ImageButton ID="pencilImageButton" runat="server" Height="200px" ImageUrl="~/pencil.png" Visible="False" Width="75px" />
+            <asp:ImageButton ID="penImageButton" runat="server" Height="185px" ImageUrl="~/pen.png" Visible="False" Width="75px" />
+            <asp:ImageButton ID="iphoneImageButton" runat="server" Height="145px" ImageUrl="~/phone.png" Visible="False" Width="140px" />
+            <asp:ImageButton ID="ipadImageButton" runat="server" Height="175px" ImageUrl="~/tablet.png" Visible="False" Width="250px" />
         </p>
         <p class="auto-style6">
-            &nbsp;</p>
-        <p class="auto-style3">
-            <asp:Image ID="resultImage" runat="server" CssClass="auto-style7" />
-        </p>
-        <p class="auto-style3">
             &nbsp;</p>
         <p class="auto-style3">
             &nbsp;</p>

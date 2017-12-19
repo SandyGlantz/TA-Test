@@ -76,12 +76,39 @@ namespace CS_ASP_012_Final {
         protected global::System.Web.UI.WebControls.Label resultLabel;
         
         /// <summary>
-        /// resultImage control.
+        /// pencilImageButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image resultImage;
+        protected global::System.Web.UI.WebControls.ImageButton pencilImageButton;
+        
+        /// <summary>
+        /// penImageButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton penImageButton;
+        
+        /// <summary>
+        /// iphoneImageButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton iphoneImageButton;
+        
+        /// <summary>
+        /// ipadImageButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ipadImageButton;
     }
 }

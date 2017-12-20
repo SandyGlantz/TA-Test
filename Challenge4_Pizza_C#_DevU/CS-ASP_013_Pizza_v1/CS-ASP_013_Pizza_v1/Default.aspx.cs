@@ -40,6 +40,9 @@ namespace CS_ASP_013_Pizza_v1
                 { crust = 2.00; }
 
 
+            /*
+             * ===== Original toppings =====
+             * 
             double toppings = 0;
             if (pepper15CheckBox.Checked)
                 { toppings = toppings + 1.50; }
@@ -51,6 +54,47 @@ namespace CS_ASP_013_Pizza_v1
                 { toppings = toppings + .75; }
             if (anch2CheckBox.Checked)
                 { toppings = toppings + 2; }
+            */
+
+            /*
+             * ===== Toppings; refactored v1 =====
+             * 
+            double toppings = 0;
+            if (pepper15CheckBox.Checked)
+                { toppings += 1.50; }
+            if (onion075CheckBox.Checked)
+                { toppings += 0.75; }
+            if (grnPep050CheckBox.Checked)
+                { toppings += .50; }
+            if (redPep075CheckBox.Checked)
+                { toppings += .75; }
+            if (anch2CheckBox.Checked)
+                { toppings += 2; }
+            */
+
+
+            /*
+             * ===== Toppings; refactored v2 =====
+             */
+            double toppings = 0;
+            if (pepper15CheckBox.Checked) toppings += 1.50;
+            if (onion075CheckBox.Checked) toppings += 0.75;
+            if (grnPep050CheckBox.Checked) toppings += .50; 
+            if (redPep075CheckBox.Checked) toppings += .75; 
+            if (anch2CheckBox.Checked) toppings += 2; 
+
+
+            /*
+            * ===== toppings; different approach, v3 =====
+            * 
+           double toppings = 0;
+           toppings = (pepper15CheckBox.Checked) ? toppings + 1.5 : toppings;
+           toppings = (onion075CheckBox.Checked) ? toppings + .75 : toppings;
+           toppings = (grnPep050CheckBox.Checked) ? toppings + .5 : toppings;
+           toppings = (redPep075CheckBox.Checked) ? toppings + .75 : toppings;
+           toppings = (anch2CheckBox.Checked) ? toppings + 2 : toppings;
+           */
+
 
             double specials = 0;
             if (pepper15CheckBox.Checked 
@@ -74,6 +118,26 @@ namespace CS_ASP_013_Pizza_v1
 
 
 
-        } 
+
+
+            // ========= Instructor solution notes  ========= 
+            /*
+            1. refactored my code in toppings ... a couple times
+
+            2. Instructor used one variable, "total" 
+                and added to it all the way down
+
+            3. Combined above in various versions
+            */
+
+
+
+
+
+
+
+
+
+        }
     }
 }

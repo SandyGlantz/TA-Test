@@ -15,7 +15,7 @@ namespace CS_ASP_016_DaysBetweenDates_Final
         }
 
 
-        // =====  output selected dates to screen  ===== 
+        // =====  outputs selected dates to screen  ===== 
         protected void cal1_SelectionChanged(object sender, EventArgs e)
         {  date1Label.Text = cal1.SelectedDate.ToShortDateString();  }
 
@@ -27,9 +27,13 @@ namespace CS_ASP_016_DaysBetweenDates_Final
 
         protected void okButton_Click(object sender, EventArgs e)
         {
+
+            /* =====  SG version =====
+             * 
             // clears the label if second run done
             resultLabel.Text = " ";
 
+            // sets the two dates
             DateTime day1 = cal1.SelectedDate;
             DateTime day2 = cal2.SelectedDate;
 
@@ -48,15 +52,20 @@ namespace CS_ASP_016_DaysBetweenDates_Final
 
             resultLabel.Text = days.ToString();
 
-
-            /*
-            //TimeSpan myAge = DateTime.Now.Subtract(myBirthday);
-            TimeSpan days = day1.Subtract(day2);
-            
-            //if days < 0;
-            //    { days = days * (-1)}
-            resultLabel.Text = days.ToString();
+            ===== End SG version =====
             */
+
+            // School solution version:
+            // I added in the equal in " >= " to account for 0
+            // ok to move parts of long line to next line, before the period
+
+            if (cal1.SelectedDate >= cal2.SelectedDate)
+            {  resultLabel.Text = cal1.SelectedDate
+                   .Subtract(cal2.SelectedDate).TotalDays.ToString();  }
+
+            else 
+            {  resultLabel.Text = cal2.SelectedDate
+                   .Subtract(cal1.SelectedDate).TotalDays.ToString();  }
 
         }
 

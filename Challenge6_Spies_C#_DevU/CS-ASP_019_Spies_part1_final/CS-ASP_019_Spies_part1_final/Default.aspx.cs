@@ -18,6 +18,12 @@ namespace CS_ASP_019_Spies_part1_final
                 firstNewCal.SelectedDate = DateTime.Now.Date.AddDays(14);
                 endNewCal.SelectedDate = DateTime.Now.Date.AddDays(21);
             }
+// the line below stops the page from going to the top after calendar date selection ...
+            // ... ONLY ON THIS PAGE
+            // it can be changed for the entire website from web.config file
+            // changes are in there in this file
+            // SEE ALSO source from Default.aspx at VERY top of page, end of line
+            // Page.MaintainScrollPositionOnPostBack = true;
         }
 
         protected void okButton_Click(object sender, EventArgs e)

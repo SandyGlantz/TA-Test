@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CS_ASP_019_Spies_part1_final.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CS_ASP_019_Spies_part1_final.Default" MaintainScrollPositionOnPostback="true" %>
 
 <!DOCTYPE html>
 

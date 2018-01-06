@@ -30,12 +30,19 @@ namespace CS_ASP_019_Spies_part2_final
 
         protected void okButton_Click(object sender, EventArgs e)
         {
-            //  =========  how to account for numbers not entered?  text/string cannot be bool
-            /* nice try - doesn't work
-            if (electRiggedTextBox.Text == "") { resultLabel.Text = "Please enter a number, or '0' if none"; }
-            if (subterfugeTextBox.Text == "") { resultLabel.Text = "Please enter a number, or '0' if none"; }
-            if (assetNameTextBox.Text == "") { resultLabel.Text = "Please enter a code name"; }
-            */
+            //  =========  how to account for numbers not entered?  
+            // ... text /string cannot be bool
+            // ... figured out work around! :-)
+
+            if (electRiggedTextBox.Text == "")
+            { resultLabel.Text = "Please enter an Elections Rigged number," + 
+                    "or '0' if none"; return; }
+            if (subterfugeTextBox.Text == "")
+            { resultLabel.Text = "Please enter a Subterfuge Acts number," +
+                    "or '0' if none"; return; }
+            if (assetNameTextBox.Text == "")
+            { resultLabel.Text = "Please enter a code name"; return; }
+            //*/
 
 
             //  =========  making sure the result label clears for each query
@@ -74,10 +81,10 @@ namespace CS_ASP_019_Spies_part2_final
             //  =========  Cleanup for re-entry of asset info
             // originally had "0.0" to clear text boxes
             // ... couldn't figure out how to set it to not crash if nothing was entered 
-            // ... next best is to default to 0 ... barely
-            assetNameTextBox.Text = " ";
-            electRiggedTextBox.Text = " ";
-            subterfugeTextBox.Text = " ";
+            // ... figured out empty - but not data type restrictions :-/
+            assetNameTextBox.Text = "";
+            electRiggedTextBox.Text = "";
+            subterfugeTextBox.Text = "";
 
         }
     }

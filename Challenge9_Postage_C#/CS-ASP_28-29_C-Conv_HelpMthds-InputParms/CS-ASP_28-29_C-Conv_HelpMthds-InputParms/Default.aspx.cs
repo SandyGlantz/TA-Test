@@ -42,7 +42,7 @@ namespace CS_ASP_028
 
 
         protected void quantityTextBox_TextChanged(object sender, EventArgs e)
-        // This went away when calculateCups() added input parems (double measureToCupRatio)
+        // This went away when calculateCups() added input params (double measureToCupRatio)
         // { calculateCups();  }
         { }
 
@@ -85,7 +85,7 @@ namespace CS_ASP_028
             else if (fromQuartsRadio.Checked) cups = quantity * 4;
             else if (fromGallonsRadio.Checked) cups = quantity * 16;
             */
-            //  this part edited due to new inout parems
+            //  this part edited due to new inout params
             double cups = quantity * measureToCupRation;
 
             resultLabel.Text = String.Format("{0:N2} {1} converts to {2:N2} cups. ",

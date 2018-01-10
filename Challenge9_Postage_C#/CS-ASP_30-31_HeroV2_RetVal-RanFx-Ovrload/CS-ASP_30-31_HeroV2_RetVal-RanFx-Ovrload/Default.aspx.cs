@@ -24,8 +24,10 @@ namespace CS_ASP_030
                 displayRoundHeader();
 
                 // battle ensues here
-                heroHealth = performAttack(heroHealth, 10, "Bad Dog", "Cute Kittens");
-                monsterHealth = performAttack(monsterHealth, 10, "Cute Kittens", "Bad Dog");
+                heroHealth = performAttack(heroHealth, 10, 
+                    "Bad Dog", "Cute Kittens");
+                monsterHealth = performAttack(monsterHealth, 10, 
+                    "Cute Kittens", "Bad Dog");               
             }
             displayResult(heroHealth, monsterHealth);
         }
@@ -98,28 +100,34 @@ namespace CS_ASP_030
             else if (monsterHealth <= 0)
                 resultLabel.Text += "<h3>The Cute and Adorable Kittens win! </h3>";
             else
-                resultLabel.Text += "<h3>They both get distracted by squirrels," 
+                resultLabel.Text += "<h3>They both get distracted by squirrels,"
                     + " and stop fighting each other</h3>";
+        }
 
 
 //    =======   Method Overloads starts here: (CS-ASP_31)  ========
-        // These all have teh same name but take different parems, aka, Overloads
+      // These all have the same name but take different params, aka, Overloads
+      //     these all must have different data types (aka "method signature")
 
-        public void displayFullStatsOfTheMonster(string monsterName, 
+      // !!!!!!!!!!! shift control space shows overload options
+            
+
+        public void displayMonsterStats(string monsterName, 
                 int health, int damageMaximum, double criticalHitChance)
         {  resultLabel.Text += String.Format("<p>{0} Current Stats<br />" + 
             "Health: {1}<br />Damage Max: {2}<br />Critical Hit Chance: {3:P}</p>", 
             monsterName, health, damageMaximum, criticalHitChance);
         }
 
-        public void displayMonstersPartialStats(string monsterName, 
+        public void displayMonsterStats(string monsterName, 
             int health, int damageMaximum)
         {  resultLabel.Text += String.Format("<p>{0} Current Stats<br />" +
             " Health: {1}<br />Damage Max: {2}</p>", 
             monsterName, health, damageMaximum);
         }
 
-        public void displayMonstersNameAndHealth(string monsterName, int health)
+        public void displayMonsterStats(string monsterName, 
+            int health)
         {  resultLabel.Text += String.Format("<p>{0} Current Stats<br />" + 
             " Health: {1}</p>", monsterName, health);
         }

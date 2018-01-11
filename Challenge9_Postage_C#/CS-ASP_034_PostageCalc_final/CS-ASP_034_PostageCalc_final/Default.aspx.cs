@@ -22,20 +22,9 @@ namespace CS_ASP_034_PostageCalc_final
         double length = 0.0;
 
 
-        // creates the update of the info when a button is selected
-        protected void groundRadioButton_CheckedChanged(object sender, EventArgs e)
-        { calculatePostage(); }
-        protected void airRadioButton_CheckedChanged(object sender, EventArgs e)
-        { calculatePostage(); }
-        protected void nextDayRadioButton_CheckedChanged(object sender, EventArgs e)
-        { calculatePostage(); }
 
-        // creates the update of the info when a text box is changed
-        protected void widthTextBox_CheckedChanged(object sender, EventArgs e)
-        { calculatePostage(); }
-        protected void heightTextBox_CheckedChanged(object sender, EventArgs e)
-        { calculatePostage(); }
-        protected void lengthTextBox_CheckedChanged(object sender, EventArgs e)
+        // updates info when a button is selected or text is changed
+        protected void checkForInputChange(object sender, EventArgs e)
         { calculatePostage(); }
 
 
@@ -72,6 +61,7 @@ namespace CS_ASP_034_PostageCalc_final
 
         private void calculatePostage()
         {
+            //input
             specialButterflyLength();
             calculatePackageSize();
             double totalPackageSize = width * height * length;
@@ -81,13 +71,9 @@ namespace CS_ASP_034_PostageCalc_final
             if (groundRadioButton.Checked) postage = totalPackageSize * 0.15;
             else if (airRadioButton.Checked) postage = totalPackageSize * 0.25;
             else if (nextDayRadioButton.Checked) postage = totalPackageSize * 0.45;
-            // note: if I included the multiplier into the radio as a param - using DRY ...
-            //     then the text box doesn't auto recalc 
-            //     because it didn't have a param to use            
-            // in a perfect world - this would have worked ...
-            //postage = (width * height * length) * multiplier;
 
 
+            // output
             resultLabel.Text = String.Format("The postage for this package is $"
                             + "{0:N2}", postage);
         }

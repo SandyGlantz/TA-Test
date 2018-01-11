@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS-ASP_034_PostageCalc_final", "CS-ASP_034_PostageCalc_final\CS-ASP_034_PostageCalc_final.csproj", "{4BF12B78-79DC-40DF-9186-26B81053B777}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS-ASP_034_PostageCalc_final", "CS-ASP_034_PostageCalc_final\CS-ASP_034_PostageCalc_final.csproj", "{5440CBE4-E703-440F-AC99-A0339838C50B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4BF12B78-79DC-40DF-9186-26B81053B777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BF12B78-79DC-40DF-9186-26B81053B777}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4BF12B78-79DC-40DF-9186-26B81053B777}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4BF12B78-79DC-40DF-9186-26B81053B777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5440CBE4-E703-440F-AC99-A0339838C50B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5440CBE4-E703-440F-AC99-A0339838C50B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5440CBE4-E703-440F-AC99-A0339838C50B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5440CBE4-E703-440F-AC99-A0339838C50B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

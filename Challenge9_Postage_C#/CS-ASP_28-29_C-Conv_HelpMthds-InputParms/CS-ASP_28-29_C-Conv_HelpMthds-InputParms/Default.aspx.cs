@@ -52,7 +52,7 @@ namespace CS_ASP_028
         //  private = hidden, encapsulated, under the hood
         //  void = no return value by itself ... returns value when called/invoked
 
-        private void calculateCups(double measureToCupRation, string measureName)
+        private void calculateCups(double measureToCupRatio, string measureName)
         {       //  .Trim removes all spaces from text
 
             if (quantityTextBox.Text.Trim().Length == 0)
@@ -86,7 +86,7 @@ namespace CS_ASP_028
             else if (fromGallonsRadio.Checked) cups = quantity * 16;
             */
             //  this part edited due to new inout params
-            double cups = quantity * measureToCupRation;
+            double cups = quantity * measureToCupRatio;
 
             resultLabel.Text = String.Format("{0:N2} {1} converts to {2:N2} cups. ",
                 quantity, measureName, cups);

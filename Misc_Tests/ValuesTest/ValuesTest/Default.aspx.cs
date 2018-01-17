@@ -7,19 +7,24 @@ using System.Web.UI.WebControls;
 
 namespace ValuesTest
 {
+
+// ========== NOTE:  Works as all doubles ... OR ... all ints
+
+
+
     public partial class Default : System.Web.UI.Page
     {
 
-        int startBalance, totalCalc, newBalance;
+        double startBalance, totalCalc, newBalance;
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
-                int startBalance = 0;
+                double startBalance = 0;
                 //startingTotalLabel.Text = startBalance.ToString();
-                int newBalance = 0;
+                double newBalance = 0;
                 newTotalLabel.Text = newBalance.ToString();
             }
         }
@@ -28,18 +33,18 @@ namespace ValuesTest
         private void calcs()
         {
             // pulling starting balance
-            int startBalance = int.Parse(newTotalLabel.Text);
+            double startBalance = double.Parse(newTotalLabel.Text);
 
             // pulling numbers to add
-            int num1 = int.Parse(num1TextBox.Text);
-            int num2 = int.Parse(num1TextBox.Text);
+            double num1 = double.Parse(num1TextBox.Text);
+            double num2 = double.Parse(num1TextBox.Text);
 
             // getting the current calc
-            int totalCalc = num1 + num2;
+            double totalCalc = num1 + num2;
             thisCalcTotalLabel.Text = totalCalc.ToString();
 
             // getting the new total
-            int newBalance = startBalance + totalCalc;
+            double newBalance = startBalance + totalCalc;
             newTotalLabel.Text = newBalance.ToString();      }
 
 

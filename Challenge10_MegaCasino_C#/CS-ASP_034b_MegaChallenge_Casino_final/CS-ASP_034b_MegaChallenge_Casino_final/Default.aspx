@@ -60,7 +60,7 @@
             <asp:Label ID="betOutcomeLabel" runat="server"></asp:Label>
         </p>
         <p class="auto-style6">
-            <asp:Label ID="playerBalanceLabel" runat="server" CssClass="auto-style3"></asp:Label>
+            <span class="auto-style3">Your balance is: $</span><asp:Label ID="playerBalanceLabel" runat="server" CssClass="auto-style3"></asp:Label>
         </p>
         <p class="auto-style5">
             &nbsp;</p>

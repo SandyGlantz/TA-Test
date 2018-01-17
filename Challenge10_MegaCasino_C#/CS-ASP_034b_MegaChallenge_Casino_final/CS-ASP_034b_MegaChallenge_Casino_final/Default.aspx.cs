@@ -13,6 +13,9 @@ namespace CS_ASP_034b_MegaChallenge_Casino_final
 //  ============   setting primary variables   ============   
         double betAmount, betResult, startingBalance, playerBalance;
 
+        //Random works up here - but also works in DisplayRandomImages
+        // ... since it's only used there I thought it better to keep the code together
+        //Random getRandomSlotImage = new Random();
 
 
 //  ============   priming the pump ... err...page ...  ============ 
@@ -29,23 +32,19 @@ namespace CS_ASP_034b_MegaChallenge_Casino_final
         }
 
 
-
 //  ============   Image array for random selection   ============  
         private void displayRandomImages()
         {   
             string [] slotImages = new string[12]  
-            { "Images/Watermelon.png","Images/Strawberry.png", "Images/Seven.png",
-              "Images/Plum.png", "Images/Orange.png", "Images/Lemon.png",
-              "Images/HorseShoe.png", "Images/Diamond.png", "Images/Clover.png",
-              "Images/Cherry.png", "Images/Bell.png", "Images/Bar.png" };
+            {   "Watermelon","Strawberry", "Seven", "Plum", "Orange", "Lemon",
+                "HorseShoe", "Diamond", "Clover", "Cherry", "Bell", "Bar" };
 
-            // This isn't returning unrandom or duplicates ... so left inside method
+            // This doesn't return unrandom or duplicates ... each image separate random
             Random getRandomSlotImage = new Random();
-            leftImage.ImageUrl = slotImages[getRandomSlotImage.Next(0, 12)];
-            middleImage.ImageUrl = slotImages[getRandomSlotImage.Next(0, 12)];
-            rightImage.ImageUrl = slotImages[getRandomSlotImage.Next(0, 12)];
+            leftImage.ImageUrl = "Images/" + slotImages[getRandomSlotImage.Next(12)] + ".png";
+            middleImage.ImageUrl = "Images/" + slotImages[getRandomSlotImage.Next(12)] + ".png";
+            rightImage.ImageUrl = "Images/" + slotImages[getRandomSlotImage.Next(12)] + ".png";
         }
-
 
 
 //  ============   User clicks the "make bet" button and the process starts   ============  
@@ -59,11 +58,9 @@ namespace CS_ASP_034b_MegaChallenge_Casino_final
         }
 
 
-
 //  ============   update player balance   ============
         private void updatePlayerBalance(out double playerBalance)
         {  playerBalance = double.Parse(playerBalanceLabel.Text);  }
-
 
 
 //  ============   clearing - makes sure an old result isn't still on screen   ============ 
@@ -75,22 +72,21 @@ namespace CS_ASP_034b_MegaChallenge_Casino_final
         { amountBetTextBox.Text = ""; }
 
 
-
 //  ============  Was a valid bet number amount actually entered?   ============  
         private void confirmBetEntered()
         {
+            // is anything at all in the amount bet text box?
             if (amountBetTextBox.Text.Trim().Length == 0)
             { betOutcomeLabel.Text = "Please place a bet amount.";
                 return; }
 
+            // is what is typed an int(double)? Separate message for that ...
             else if (!Double.TryParse(amountBetTextBox.Text, out betAmount))
             { betOutcomeLabel.Text = "Please enter only numbers";
                 return; }
 
-            else
-                getBetAmount();
+            else  getBetAmount();
         }
-
 
 
 //  ============   What is the amount bet?   ============  
@@ -99,7 +95,6 @@ namespace CS_ASP_034b_MegaChallenge_Casino_final
             if (Double.TryParse(amountBetTextBox.Text, out betAmount))
             {  loanShark();  }
         }
-
 
 
 //  ============   Can the bettor cover the amount bet?   ============  
@@ -119,20 +114,16 @@ namespace CS_ASP_034b_MegaChallenge_Casino_final
         }
 
 
-
-//  ============   Now that we have a player ... does the luck of spin rule them out with bars?   ============  
+//  ============   Now that we have a player ... does the spin rule them out with bars?   ============  
         private void checkForBars()
         {
             if (leftImage.ImageUrl == "Images/Bar.png" ||
                 middleImage.ImageUrl == "Images/Bar.png" ||
                 rightImage.ImageUrl == "Images/Bar.png")
-
             {  calcLosses();  }
 
-            else
-              checkForSevens();  
+            else  checkForSevens();  
         }
-
 
 
 //  ============   If the bars weren't Game Over; what about JACKPOT three sevens?   ============  
@@ -146,10 +137,8 @@ namespace CS_ASP_034b_MegaChallenge_Casino_final
                 calcWinnings();
             }
 
-            else
-                checkForCherries();
+            else  checkForCherries();
         }
-
 
 
 //  ============   Did they get cherries and make money??   ============  
@@ -157,7 +146,6 @@ namespace CS_ASP_034b_MegaChallenge_Casino_final
         {
             //  UGH.  WAY too big/long. NOT DRY either ...
             // splitting into 1 cherry vs. 2 or 3 cherries seems more error-prone
-
 
             //Three(3) Cherries quadruples your bet!
             if (leftImage.ImageUrl == "Images/Cherry.png" &&
@@ -189,10 +177,8 @@ namespace CS_ASP_034b_MegaChallenge_Casino_final
                 calcWinnings();
             }
               
-            else
-            calcLosses();
+            else  calcLosses();
         }
-
 
 
 //  ============   Output losses   ============  
@@ -204,7 +190,6 @@ namespace CS_ASP_034b_MegaChallenge_Casino_final
         }
 
 
-
 //  ============   Output winnings   ============  
         private void calcWinnings()
         {
@@ -212,7 +197,6 @@ namespace CS_ASP_034b_MegaChallenge_Casino_final
                 betAmount, betResult);
             calcPlayerBalance();
         }
-
 
 
 //  ============   Calculate the player's balance   ============  

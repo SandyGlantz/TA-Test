@@ -22,10 +22,13 @@ namespace CS_ASP_034b_MegaChallenge_Casino_final
         public void Page_Load(object sender, EventArgs e)
         {
            if (!Page.IsPostBack)
-            {
+            {   /*
+                ViewState.Add("startingBalance", 100);
+                playerBalanceLabel.Text = string.Format("Your starting balance is {0:C}", 
+                    ViewState["startingBalance"]);       */
+
                 startingBalance = 100.0;
                 playerBalance = startingBalance;
-                //ViewState.Add("balance", playerBalance);
                 displayRandomImages();
                 playerBalanceLabel.Text = String.Format("{0:N2}", playerBalance);
             }
@@ -202,7 +205,11 @@ namespace CS_ASP_034b_MegaChallenge_Casino_final
 //  ============   Calculate the player's balance   ============  
         private void calcPlayerBalance()
         {
-            //ViewState["balance"] = (double)ViewState["balance"] + betResult;
+
+            //playerBalance = double.Parse(ViewState["startingBalance"].ToString());
+            //playerBalance = playerBalance + betResult;
+            //ViewState["startingBalance"] = playerBalance;
+
             playerBalance = playerBalance + betResult;
             playerBalanceLabel.Text = String.Format("{0:N2}", playerBalance);
             return;

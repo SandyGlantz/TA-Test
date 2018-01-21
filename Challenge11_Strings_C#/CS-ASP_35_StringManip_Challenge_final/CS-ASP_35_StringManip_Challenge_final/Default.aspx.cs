@@ -108,15 +108,6 @@ namespace CS_ASP_35_StringManip_Challenge_final
             // not really a puzzle .. s/be: 
             // Now is the time for all good men to come to the aid of their country.
 
-            // index of remove-me = // IndexOf()
-            // int selectedTextIndex = inputValue.IndexOf("cat");
-
-            // replace Z with T
-            // use ToLower on all but index[0]
-
-            // The output -with string helper methods- should read:
-            // Now is the time for all good men to come to the aid of their country.
-
             outputLabel.Text += "<br /><br /><br />Challenge, part 4: " 
                 + "Fix this and make it read proper: <br />" +
                 "NOW IS ZHEremove-me ZIME FOR ALL GOOD MEN ZO COME ZO ZHE AID OF ZHEIR COUNZRY.<br /> ";
@@ -131,9 +122,6 @@ namespace CS_ASP_35_StringManip_Challenge_final
 
             outputLabel.Text += "<br />"
                 + sentence2fix;
-
-
-
 
 
         }

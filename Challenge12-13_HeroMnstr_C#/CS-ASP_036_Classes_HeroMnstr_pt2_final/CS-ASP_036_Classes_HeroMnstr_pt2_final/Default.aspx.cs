@@ -16,50 +16,80 @@ namespace CS_ASP_036_Classes_HeroMnstr_pt2_final
             hero.Name = "Cute Kittens";
             hero.Health = 50;
             hero.DamageMax = 20;
-            hero.AttackBonus = false;
+            hero.AttackBonus = true;
 
             Character monster = new Character();
             monster.Name = "Bad Dog";
             monster.Health = 50;
-            monster.DamageMax = hero.DamageMax;
-            monster.AttackBonus = false;
+            monster.DamageMax = 20;
+            monster.AttackBonus = true;
 
-            Dice diceMax = new Dice();
-            //diceMax.Sides = 20; // why hard-code when it's supposed to be the same as the Damage Max?
-            diceMax.Sides = hero.DamageMax;
+            //this brings the Dice class and its methods into this class.
+            Dice dice = new Dice();
 
 
             // setting a baseline ... 
             // *repeating* bonus T/F and DamageMax is irrelevant when it doesn't change.
-            resultLabel.Text = "Our game begins with the Adorable Kittens facing an evil Bad Dog...<br /><br />";
+            resultLabel.Text = "<h3>Our game begins with the Adorable Kittens " +
+                "facing an evil Bad Dog ...</h3><br /><br />";
             printStartStats(hero);
             printStartStats(monster);
             resultLabel.Text += "<br /> <hr color=\"blue\" width= \"60%\"> <br />";
 
+            // bonus round version 1 ...
+            if (hero.AttackBonus)
+            {
+                int damage = hero.Attack(dice);
+                monster.Defend(damage);
+                resultLabel.Text += string.Format("The {0} wake up from their nap" +
+                    " and want to play, scoring {1} bonus points! <br />", hero.Name, damage);
+            }
+
+            if (monster.AttackBonus)
+            {
+                int damage = monster.Attack(dice);
+                hero.Defend(damage);
+                resultLabel.Text += string.Format("{0} doesn't want to play, " +
+                    "but gets {2} bonus points anyway.<br /> <br />",
+                    monster.Name, hero.Name, damage);
+            }
+
+            printStats(hero);
+            printStats(monster);
+            // added this in to separate rounds:
+            resultLabel.Text += "<br /><br />Bonus round is over." +
+                " Wasn't that meaningful? <br /><br />" +
+                "<hr color=\"blue\" width= \"60%\"><br /><br />";
+       
+
+
+
+
+    
+            // ending to the game
             while (hero.Health > 0 && monster.Health > 0)
             {
-                int damage = hero.Attack(diceMax.Roll());
+                int damage = hero.Attack(dice);
                 monster.Defend(damage);
-                resultLabel.Text += string.Format("The {0} cuddly and adorable attack" +
+                resultLabel.Text += string.Format("The {0} cuddle and purr attack" +
                     " scores {1} points! <br />", hero.Name, damage);
 
-                damage = hero.Attack(diceMax.Roll());
+                damage = monster.Attack(dice);
                 hero.Defend(damage);
-                resultLabel.Text += string.Format("{0} is grumpy and attacks the " +
+                resultLabel.Text += string.Format("{0} is grumpy and growls at the " +
                     "innocent {1}, causing {2} points damage.<br /> <br />",
                     monster.Name, hero.Name, damage);
 
-                printStats(hero);
-                printStats(monster);
+                printStats(hero);       printStats(monster);
                 // added this in to separate rounds:
-                resultLabel.Text += "<br /><br />";
+                resultLabel.Text += "<br /><br /><br /><br />";
             }
 
             finalScore(hero, monster);
 
 
 
-            //  ===============  end Page_Load  ===============
+//  ===============  end Page_Load  ===============
         }
 
 
@@ -78,7 +108,7 @@ namespace CS_ASP_036_Classes_HeroMnstr_pt2_final
 
         private void printStats(Character character)
         {
-            resultLabel.Text += string.Format("{0} new score is: {1}, ",
+            resultLabel.Text += string.Format("{0} new score is: {1} ... ",
                 character.Name, character.Health);
         }
 
@@ -86,8 +116,8 @@ namespace CS_ASP_036_Classes_HeroMnstr_pt2_final
         private void finalScore(Character contestant, Character opponent)
         {
             if (contestant.Health <= 0 && opponent.Health <= 0)
-                resultLabel.Text += "They were both distracted by squirrels, and"
-                    + " live to play another day.";
+                resultLabel.Text += "They were both distracted by squirrels, "
+                    + "and played together nicely the rest of the day.";
             else if (contestant.Health <= 0)
                 resultLabel.Text += string.Format("{0} won.", opponent.Name);
             else
@@ -95,7 +125,7 @@ namespace CS_ASP_036_Classes_HeroMnstr_pt2_final
         }
 
 
-        //  ===============  end Default class ... and printing methods  ===============
+//  ===============  end Default class ... and printing methods  ===============
     }
 
 
@@ -104,15 +134,14 @@ namespace CS_ASP_036_Classes_HeroMnstr_pt2_final
     {
         public int Sides { get; set; }
 
-        Random rDice = new Random();
+        //multiple dice = di ... r = random
+        Random rDi = new Random();
 
         public int Roll()
-        {
-            int diceAmount = rDice.Next(1, this.Sides);
-            return diceAmount;
-        }
+            // added one so the points could go the full amount of DamageMax.
+        { return rDi.Next(1, this.Sides + 1);     }
 
-        //  ===============  end Dice class  ===============
+//  ===============  end Dice class  ===============
     }
 
 
@@ -127,9 +156,10 @@ namespace CS_ASP_036_Classes_HeroMnstr_pt2_final
         public bool AttackBonus { get; set; }
 
 
-        public int Attack(int diceRoll)
+        public int Attack(Dice dice)
         {
-            int damage = diceRoll;
+            dice.Sides = this.DamageMax;
+            int damage = dice.Roll();
             return damage;
         }
 
@@ -137,8 +167,10 @@ namespace CS_ASP_036_Classes_HeroMnstr_pt2_final
         public void Defend(int damage)
         { this.Health -= damage; }
 
-        //  ===============  end Character class  ===============
+
+
+//  ===============  end Character class  ===============
     }
 
-    //  ===============  end  namespace  ===============
+//  ===============  end  namespace  ===============
 }

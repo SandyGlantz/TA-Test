@@ -86,8 +86,8 @@ namespace CS_ASP_036_Classes_HeroMnstr_pt2_aargh
         private void finalScore(Character contestant, Character opponent)
         {
             if (contestant.Health <= 0 && opponent.Health <= 0)
-                resultLabel.Text += "They were both distracted by squirrels, and" 
-                    + " live to play another day.";
+                resultLabel.Text += "They were both distracted by squirrels, "
+                    + "and played together nicely the rest of the day.";
             else if (contestant.Health <= 0)
                 resultLabel.Text += string.Format("{0} won.", opponent.Name);
             else
@@ -104,17 +104,15 @@ namespace CS_ASP_036_Classes_HeroMnstr_pt2_aargh
     {
         public int Sides { get; set; }
 
-        Random rDice = new Random();
+        //multiple dice = di ... r = random
+        Random rDi = new Random();
 
         public int Roll()
-        {
-            int diceAmount = rDice.Next(1, this.Sides);
-            return diceAmount;
-        }
+        // added one so the points could go the full amount of DamageMax.
+        { return rDi.Next(this.Sides + 1); }
 
 //  ===============  end Dice class  ===============
     }
-
 
 
 

@@ -36,7 +36,7 @@ namespace CS_ASP_032
 
 
 
-                //   ========  Optional Param version (032) version  ========
+//   ========  Optional Param version (032) version  ========
                 
                 heroHealth = performAttack(heroHealth, 10,
                     "Bad Dog", "Cute Kittens");
@@ -45,7 +45,7 @@ namespace CS_ASP_032
                
 
                 
-                //   ========  Parameter Names/ Named Params (033) info below  ========
+//   ========  Parameter Names/ Named Params (033) info below  ========
                 
                 //  this allows skipping of CritcalHit
                 //  NOTE: didn't have to name all - just out of order
@@ -75,8 +75,8 @@ namespace CS_ASP_032
         //  methodology for battle
 
 
-        //   ========  Optional Parameters (032) info below  ========
-        //   ========  Also used this block in (033)  ========
+//   ========  Optional Parameters (032) info below  ========
+//   ========  Also used this block in (033)  ========
 
         Random random = new Random(); // I moved this here from below (=better random)
         private int performAttack(
@@ -101,7 +101,8 @@ namespace CS_ASP_032
 
 
         // methodology for displaying rounds (attacks) in the game
-        private void describeRound(string attackerName, string defenderName, int defenderHealth)
+        private void describeRound(
+            string attackerName, string defenderName, int defenderHealth)
         {
             if (defenderHealth <= 0)
                 resultLabel.Text +=

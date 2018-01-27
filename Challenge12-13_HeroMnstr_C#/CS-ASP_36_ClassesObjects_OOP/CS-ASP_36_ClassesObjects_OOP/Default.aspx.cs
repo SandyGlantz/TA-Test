@@ -71,8 +71,9 @@ namespace CS_ASP_36_ClassesObjects_OOP
 
     // moved method determineMarketValue, from class Page_Load:
     // changed private to public
-    // capitalize the D at the beggining
-    // replace "  (Car car) " passed in, then ref with " this "
+    // capitalize the D at the beginning (because public)
+    // replace "  (Car car) " passed into outside class method (now commented out), 
+    //      and inside its class used with " this " (optional for functionality)
     // NOTE: * this *  isn't needed ... but good for clarity
     // sg NOTE: intellisense suggests " this " be removed
     // sg note: when Car car was left in:

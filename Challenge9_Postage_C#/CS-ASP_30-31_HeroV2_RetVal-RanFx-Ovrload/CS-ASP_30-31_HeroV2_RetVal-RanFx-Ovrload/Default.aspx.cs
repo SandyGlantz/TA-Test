@@ -24,10 +24,8 @@ namespace CS_ASP_030
                 displayRoundHeader();
 
                 // battle ensues here
-                heroHealth = performAttack(heroHealth, 10, 
-                    "Bad Dog", "Cute Kittens");
-                monsterHealth = performAttack(monsterHealth, 10, 
-                    "Cute Kittens", "Bad Dog");               
+                heroHealth = performAttack(heroHealth, 10, "Bad Dog", "Cute Kittens");
+                monsterHealth = performAttack(monsterHealth, 10, "Cute Kittens", "Bad Dog");               
             }
             displayResult(heroHealth, monsterHealth);
         }
@@ -41,8 +39,7 @@ namespace CS_ASP_030
                 + " and the Monster (bad dog)</h3>";  }
 
 
-
-        // shows clean way to delineate between attacks
+        // clean way to delineate between attacks
         private void displayRoundHeader()
         {  resultLabel.Text += "<hr /><p>Round begins ...</p>";  }
 
@@ -57,14 +54,14 @@ namespace CS_ASP_030
             // the line below moved to outside of method to create (better) random
             //  random determined using base ("seed value") 
             //     of (computer) time (so not truly random)
-            //  when inside it pulls the seed repeatedly,
-            //     uses the same base time and that results in a pattern
+            //  when inside it pulls the seed use\ing the same base time
+            //     and that results in a pattern
             //  moving it outside the method means a different time time each time
             //     because random pulled once, and the .next does "random"
             //     thus, a better random.
             //Random random = new Random();
 
-          
+
             int damage = random.Next(1, attackerDamageMax);
             defenderHealth -= damage;
             //  To see the damage pattern from having random in the original location:
@@ -112,22 +109,22 @@ namespace CS_ASP_030
       // !!!!!!!!!!! shift control space shows overload options
             
 
-        public void displayMonsterStats(string monsterName, 
-                int health, int damageMaximum, double criticalHitChance)
+        public void displayMonsterStats(
+            string monsterName, int health, int damageMaximum, double criticalHitChance)
         {  resultLabel.Text += String.Format("<p>{0} Current Stats<br />" + 
             "Health: {1}<br />Damage Max: {2}<br />Critical Hit Chance: {3:P}</p>", 
             monsterName, health, damageMaximum, criticalHitChance);
         }
 
-        public void displayMonsterStats(string monsterName, 
-            int health, int damageMaximum)
+        public void displayMonsterStats(
+            string monsterName, int health, int damageMaximum)
         {  resultLabel.Text += String.Format("<p>{0} Current Stats<br />" +
             " Health: {1}<br />Damage Max: {2}</p>", 
             monsterName, health, damageMaximum);
         }
 
-        public void displayMonsterStats(string monsterName, 
-            int health)
+        public void displayMonsterStats(
+            string monsterName, int health)
         {  resultLabel.Text += String.Format("<p>{0} Current Stats<br />" + 
             " Health: {1}</p>", monsterName, health);
         }

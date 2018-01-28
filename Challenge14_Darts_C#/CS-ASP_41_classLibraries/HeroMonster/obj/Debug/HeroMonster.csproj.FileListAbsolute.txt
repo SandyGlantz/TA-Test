@@ -1,0 +1,5 @@
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge14_Darts_C#\CS-ASP_41_classLibraries\HeroMonster\bin\Debug\HeroMonster.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge14_Darts_C#\CS-ASP_41_classLibraries\HeroMonster\bin\Debug\HeroMonster.pdb
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge14_Darts_C#\CS-ASP_41_classLibraries\HeroMonster\obj\Debug\HeroMonster.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge14_Darts_C#\CS-ASP_41_classLibraries\HeroMonster\obj\Debug\HeroMonster.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge14_Darts_C#\CS-ASP_41_classLibraries\HeroMonster\obj\Debug\HeroMonster.pdb

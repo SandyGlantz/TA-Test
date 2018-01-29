@@ -46,29 +46,18 @@ namespace CS_ASP_030
 
 
         //  methodology for battle 
-        //  see notes below why random sits here
+
         Random random = new Random();
-        private int performAttack(int defenderHealth, int attackerDamageMax, 
-            string attackerName, string defenderName)
+
+        private int performAttack(
+            int defenderHealth, int attackerDamageMax, string attackerName, string defenderName)
         {
-            // the line below moved to outside of method to create (better) random
-            //  random determined using base ("seed value") 
-            //     of (computer) time (so not truly random)
-            //  when inside it pulls the seed use\ing the same base time
-            //     and that results in a pattern
-            //  moving it outside the method means a different time time each time
-            //     because random pulled once, and the .next does "random"
-            //     thus, a better random.
-            //Random random = new Random();
-
-
             int damage = random.Next(1, attackerDamageMax);
+
             defenderHealth -= damage;
-            //  To see the damage pattern from having random in the original location:
-            //resultLabel.Text += "<hr /><p style='color:red;'>Roll: "
-             //   + damage.ToString() + "</p>";
 
             describeRound(attackerName, defenderName, defenderHealth);
+
             return defenderHealth;
         }
 

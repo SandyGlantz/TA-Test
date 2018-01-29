@@ -9,47 +9,70 @@ namespace Darts
     public class Dart
     {
         // sg/ single job determine where dart lands
-        
 
-        // start with properties
-        // ?? would this be dart1, dart2, dart3  ?? -Nope- different game could have 2 dart
-        // or --->  throw int
-        //          bool bullInner  -- use a Ternary??
-        //          bool bullOuter
-        //          bool ringInner
-        //          bool ringOuter
-        //
-        // example is public int Year (get/set)
+        // do I need a Player property?
+        public string Player { get; set; }
+        public int BaseScore { get; set; }
+
+        //  -- use a Ternary??
+        public bool InnerBullseye { get; set; }
+        public bool OuterBullseye { get; set; }
+        public bool InnerRing { get; set; }
+        public bool OuterRing { get; set; }
 
 
-        // constructor to instaniate
+        // constructor to instaniate with base value
         public Dart()
         {
-            // example is this.Make = 1980/ undefined
-            // set defaults to false and 0
+            this.Player = "";
+            this.BaseScore = -1;
+            this.InnerBullseye = false;
+            this.OuterBullseye = false;
+            this.InnerRing = false;
+            this.OuterRing = false;
+           
+        }
+
+        Random randomDart = new Random();
+
+        public int Throw(out int baseScore)
+        {
+            // add 1 into number to account for -1 instantiation
+            baseScore = randomDart.Next(0, 21);
+
+            if (baseScore == 0)
+            {   InOutBullseye();  }
+            else
+            {   InOutRing();      }
+            
+            return baseScore+1;
         }
 
 
-        //then the methods ...
+        public bool InOutBullseye()
+        {
+            int bullseye = randomDart.Next(1, 21);
+            // Req: 5% for inner Bullseye
+            if (bullseye == 7)
+                return InnerBullseye = true;
+            else
+                return OuterBullseye = true;
+        }
 
-        //  Req: needs random generator outside Throw() method
-        Random dartRandom = new Random();
-
-        //  Req:  needs Throw() method
-        //  random 0,21
-        // if zero return bullseye
-             // sgIdea/ use -1, 21 ... -1 = innerBullseye, 0 = outerBullseye
-             // Nope ...  :-(
-             // Req: 5% for inner Bullseye ... needs its own random
-
-
-        // bool bullseye(inner, outer)
-        //random 1,21 ... 14 = innner
+         
+        public bool InOutRing()
+        {
+            int rings = randomDart.Next(1, 21);
+            // Req: 5% for each ring
+            if (rings == 7)
+                return InnerRing = true;
+            if (rings == 14)
+                return OuterRing = true;
+            else return false;
+        }
 
 
-        // bool rings (outer ring, inner ring)
-        // this needs to exempt someone who hit 0/bullseye
-        // 5% = random 1,21 ...  7 = inner True ...  14=outer True
 
+        // need a way to return player score and keep going until sxore met.
     }
 }

@@ -40,7 +40,7 @@
         <p class="auto-style4">
             &nbsp;</p>
         <p class="auto-style1">
-            <asp:Image ID="Image1" runat="server" CssClass="auto-style3" DescriptionUrl="~/dartboard.jpg" Height="286px" ImageUrl="~/dartboard.jpg" Width="370px" />
+            <asp:Image ID="Image1" runat="server" CssClass="auto-style3" DescriptionUrl="~/dartboard.jpg" Height="294px" ImageUrl="~/dartboard.jpg" Width="378px" />
         </p>
         <p class="auto-style4">
             &nbsp;</p>

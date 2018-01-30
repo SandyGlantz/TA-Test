@@ -32,7 +32,7 @@ namespace dartsSandbox
             player2.InnerRing = false;
             player2.OuterRing = false;
 
-            int round1 = player1.Score();
+            //int round1 = player1.Score();
 
             resultLabel.Text = String.Format("Name: {0}, Base Score: {1}, Bullseye?: {2}, {3}",
                 player1, player1.BaseScore, player1.InnerBullseye, player1.OuterBullseye);
@@ -59,7 +59,8 @@ namespace dartsSandbox
             public int RunTheGame()
             {
                 Throw();
-
+                int a = 1;
+                return a;
             }
 
             public int Throw()

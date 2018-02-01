@@ -8,18 +8,18 @@ namespace CS_ASP_045_DartsChallenge_final
 {
     public static class Score
     {
-            
-        //Get the values:
 
-        //Throw(int baseScore) = Base64FormattingOptions; 
-
-        // int Multiplier() - for rings ... inner (3x baseScore) outer (2x baseScore)
-
-        // int Bullseye() - for inner (50) or outer (25)
-        //-- use a Ternary??
-
-
-
+        public static int IsBonus()
+        {
+            Game game = new Game();
+            Dart dart = new Dart();
+            if (dart.DartInnerBullseye) game.DartLandingScore += 50;
+            if (dart.DartOuterBullseye) game.DartLandingScore += 25;
+            if (dart.DartInnerRing) game.DartLandingScore += game.DartLandingScore * 3;
+            if (dart.DartOuterRing) game.DartLandingScore += game.DartLandingScore * 2;
+            else game.DartLandingScore += 0;
+            return game.DartLandingScore;
+        }
 
     }
 }

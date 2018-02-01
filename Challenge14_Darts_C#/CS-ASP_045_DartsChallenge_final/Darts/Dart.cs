@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Darts
 {
     public class Dart // will need to be in library called "Darts"
@@ -14,8 +15,6 @@ namespace Darts
         public bool DartInnerBullseye { get; set; }
         public bool DartOuterRing { get; set; }
         public bool DartInnerRing { get; set; }
-        //public bool Bullseye { get; set; }
-
 
         Random randomDart = new Random();
 
@@ -24,11 +23,9 @@ namespace Darts
         {
             GetRandomDartLocation();
             IsBullseyeOrRing();
-            //IsInnerRing();
         }
 
 
-        // this could go inside Throw()? But not single principle
         public int GetRandomDartLocation()
         { return this.DartLocation = randomDart.Next(0, 21); }
 
@@ -63,7 +60,7 @@ namespace Darts
                 this.DartInnerRing = false;
             return this.DartOuterRing = false;   // tested w/true to make sure it was reached
             // this solution seems awkward. But works beautifully.
-            // even when inner ring !7 or !14 set to true, overrided when true.
+            // even when inner ring !7 or !14 set to true, overridden when true.
         }
 
 

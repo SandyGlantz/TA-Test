@@ -16,133 +16,201 @@ namespace dartsSandbox
 
         protected void okButton_Click(object sender, EventArgs e)
         {
-            Dart player1 = new Dart();
-            player1.PlayerName = "Cute Kittens";
-            player1.BaseScore = -1; // should this be -1 to avoid Bullseye issues?
-            player1.InnerBullseye = false;
-            player1.OuterBullseye = false;
-            player1.InnerRing = false;
-            player1.OuterRing = false;
-
-            Dart player2 = new Dart();
-            player2.PlayerName = "Crazy Puppies";
-            player2.BaseScore = -1; // should this be -1 to avoid Bullseye issues?
-            player2.InnerBullseye = false;
-            player2.OuterBullseye = false;
-            player2.InnerRing = false;
-            player2.OuterRing = false;
-
-            //int round1 = player1.Score();
-
-            resultLabel.Text = String.Format("Name: {0}, Base Score: {1}, Bullseye?: {2}, {3}",
-                player1, player1.BaseScore, player1.InnerBullseye, player1.OuterBullseye);
+            //access the outside classes
+            Dart dart = new Dart();// do I need this - or just game needs it?
+            Game game = new Game();
+            Players player = new Players();
 
 
+            player.Gamers();
+            string whoWon = player.Winner;
 
+            resultLabel.Text += whoWon + "<br/><br/>";
         }
+    }
+
+    public class Game
+    {
+        public string PlayerName { get; set; }
+        public int DartLandingScore { get; set; }
+        public int GameScore { get; set; }
+        public int MaxGameScore { get; set; }// s/be bool? AND be in Score class?
+        public int ThrowsPerTurn { get; set; } // should this go in Score class?
+
+        //access the outside class
+        Dart dart = new Dart();
 
 
+        //starts the game
+        public void PlayGame()
+        { RunningTotal(); }
 
-
-    public class Dart
+        public int ThrowIt()
         {
-            public string PlayerName { get; set; }
-            public int BaseScore { get; set; }
-            public bool InnerBullseye { get; set; }
-            public bool OuterBullseye { get; set; }
-            public bool InnerRing { get; set; }
-            public bool OuterRing { get; set; }
-            public bool NoRing { get; set; }
+            dart.Throw();
+            return this.DartLandingScore = dart.DartLocation;
+        }
 
-            Random randomDart = new Random();
+        public int IsBonus()// this should have parts from static class
+        {
+            if (dart.DartInnerBullseye) this.DartLandingScore += 50;
+            if (dart.DartOuterBullseye) this.DartLandingScore += 25;
+            if (dart.DartInnerRing) this.DartLandingScore += DartLandingScore * 3;
+            if (dart.DartOuterRing) this.DartLandingScore += DartLandingScore * 2;
+            else this.DartLandingScore += 0;
+            return DartLandingScore;
+        }
 
-            public int RunTheGame()
+        public int TrackThrow1()
+        {
+            int testThrow1 = ThrowIt();
+            testThrow1 += IsBonus();
+            return testThrow1;
+        }
+
+        public int TrackThrow2()
+        { int testThrow2 = ThrowIt(); return testThrow2; }
+
+        public int TrackThrow3()
+        { int testThrow3 = ThrowIt(); return testThrow3; }
+
+        public int ThrowTotal()
+        {
+            int throw1 = TrackThrow1();
+            int throw2 = TrackThrow2();
+            int throw3 = TrackThrow3();
+            int throwTotal = throw1 + throw2 + throw3;
+            return throwTotal;
+        }
+
+        public void RunningTotal()
+        {
+            int throwTotal = ThrowTotal();
+            this.DartLandingScore = throwTotal;
+            this.GameScore += this.DartLandingScore;
+        }
+    }
+
+    public class Players
+    {
+        public string Winner { get; set; }
+
+
+        Random coinflip = new Random();
+        // to get the class to carry over - must be inside a void
+        public void Gamers()
+        {
+            Game player1 = new Game();
+            player1.PlayerName = "The Cat";
+            player1.DartLandingScore = 0;
+            player1.GameScore = coinflip.Next(0,21); // hack to counter (not) random tie issue
+
+
+            Game player2 = new Game();
+            player2.PlayerName = "The Dog";
+            player2.DartLandingScore = 0;
+            player2.GameScore = coinflip.Next(0, 21); // hack to counter (not) random tie issue
+
+
+
+            while (player1.GameScore < 301 || player2.GameScore < 301)
             {
-                Throw();
-                int a = 1;
-                return a;
+                player1.RunningTotal();
+                player2.RunningTotal();
             }
 
-            public int Throw()
-            {  
-                int boardLocation = randomDart.Next(0, 21);
-                int baseScore = boardLocation;
-                if (boardLocation != 0)     InOutRing(); 
-                else                        InOutBullseye();
-                return baseScore;
-            }
-
-
-            public bool InOutBullseye()
-            {   // Req: 5% for inner Bullseye
-                int bullseye = randomDart.Next(1, 21);
-
-                bool innerBullseye = false;
-                bool outerBullseye = false;
-                
-                if (bullseye == 7)  return innerBullseye = true;
-                else                return outerBullseye = true;        }
-
-
-            public bool InOutRing()
-            {   // Req: 5% for each ring
-                int rings = randomDart.Next(1, 21);
-
-                bool innerRing = false;
-                bool outerRing = false;
-                bool noRing = false;
-
-                if (rings == 7) return innerRing = true;
-                if (rings == 14) return outerRing = true;
-                else return noRing = true;
-            }
-
-
-            public void Game(int baseScore)
-            {   // bringing in basescore means it can't be a static 
-                int outerBullseyePts = 25;
-                int innerBullseyePts = 50;
-                int outerRingPts = baseScore * 2;
-                int innerRingPts = baseScore * 3;
-
-                
-
-            }
-
-
-            public void Score(int baseScore, bool innerBullseye, bool outerBullseye,
-                bool innerRing, bool outerRing, int outerBullseyePts,
-                int innerBullseyePts, int outerRingPts, int innerRingPts)
-            {
-                //Game game = new Game(); ... use this when Game is a class
-
-                int totalScore = baseScore;
-
-                if (baseScore == 0 && innerBullseye == true) totalScore = innerBullseyePts;
-                else if (baseScore == 0 && outerBullseye == true) totalScore = outerBullseyePts;
-
-                else if (outerRing == true) totalScore = baseScore * outerRingPts;
-                else if (innerRing == true) totalScore = baseScore * innerRingPts;
-
-                else totalScore = baseScore;
-
-             
-
-               
-
-
-
-
-
-
-            }
+            FinalScore(player1, player2);
 
         }
- 
+
+
+        public string FinalScore(Game gamerA, Game gamerB)
+        {
+            if (gamerA.GameScore > gamerB.GameScore)
+            {
+                string Winner = string.Format("{0} wins with {1} points.<br/>" +
+                  "{2} lost with {3} points.<br/><br/><br/>"
+                  , gamerA.PlayerName, gamerA.GameScore, gamerB.PlayerName, gamerB.GameScore);
+                return this.Winner = Winner;
+            }
+
+            if (gamerA.GameScore < gamerB.GameScore)
+            {
+                string Winner = string.Format("{0} wins with {1} points.<br/>" +
+                  "{2} lost with {3} points.<br/><br/><br/>"
+                  , gamerB.PlayerName, gamerB.GameScore, gamerA.PlayerName, gamerA.GameScore);
+                return this.Winner = Winner;
+            }
+            else
+            {
+                string Winner = string.Format("It's a tie ... or something went wrong ...<br>" +
+                  "{0} comes in with {1} points.<br/>" +
+                    "{2} comes in with {3} points.<br/><br/><br/>"
+                    , gamerA.PlayerName, gamerA.GameScore, gamerB.PlayerName, gamerB.GameScore);
+                return this.Winner = Winner;
+            }
+
+
+        }
+    }
 
 
 
 
-}
-    
+
+
+
+
+
+    public class Dart // working perfectly as a library in _final
+
+    {
+        public int DartLocation { get; set; }
+        public bool DartOuterBullseye { get; set; }
+        public bool DartInnerBullseye { get; set; }
+        public bool DartOuterRing { get; set; }
+        public bool DartInnerRing { get; set; }
+
+        Random randomDart = new Random();
+
+
+        public void Throw()
+        {
+            GetRandomDartLocation();
+            IsBullseyeOrRing();
+            //IsInnerRing();
+        }
+
+        public int GetRandomDartLocation()
+        { return this.DartLocation = randomDart.Next(0, 21); }
+
+        public void IsBullseyeOrRing()
+        {
+            if (this.DartLocation == 0)
+                IsInnerBullseye();
+            else IsRing();
+        }
+
+        public bool IsInnerBullseye()
+        {
+            int bullseyeType = randomDart.Next(1, 21);
+
+            if (bullseyeType == 14) return this.DartInnerBullseye = true;
+            else return this.DartOuterBullseye = true;
+        }
+
+        public bool IsRing()
+        {
+            int ringsType = randomDart.Next(1, 21);
+
+            if (ringsType == 7) return this.DartInnerRing = true;
+            if (ringsType == 16) return this.DartOuterRing = true;
+            if (ringsType != 7 || ringsType != 16)
+                this.DartInnerRing = false;
+            return this.DartOuterRing = false;   // tested w/true to make sure it was reached
+            // this solution seems awkward. But works beautifully.
+            // even when inner ring !7 or !14 set to true, overrided when true.
+        }
+    }
+
 }

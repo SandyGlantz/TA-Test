@@ -18,30 +18,14 @@ namespace CS_ASP_045_DartsChallenge_final
 
         protected void okButton_Click(object sender, EventArgs e)
         {
+
             //access the outside class
-            Dart dart = new Dart();
+            Players player = new Players();
 
-            dart.Throw();
+            // gets the result string, which can go into the local resultLabel
+            player.Gamers();
 
-            // this would be prefaced with a player1, player2, eventually ...
-            int baseScore = dart.DartLocation;
-            bool innerBullseye = dart.DartInnerBullseye;
-            bool outerBullseye = dart.DartOuterBullseye;
-            bool innerRing = dart.DartInnerRing;
-            bool outerRing = dart.DartOuterRing;
-
-
-            //dart.DartBullseye == 1 ? true : false;
-
-
-            resultLabel.Text += string.Format("The board location of the dart thrown is {0}."
-                 + "<br/>  Was the inner Bullseye hit?: {1}."
-                 + "<br/>  Was the outer Bullseye hit?: {2}."
-                 + "<br/>  Was the inner Ring hit?: {3}."
-                 + "<br/>  Was the outer Ring hit?: {4}."
-                 + "<br/><br/><br/>"
-                , baseScore, innerBullseye, outerBullseye, innerRing, outerRing);
-
+            resultLabel.Text += player.Winner + "<br/>";
 
         }
     }

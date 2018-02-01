@@ -6,12 +6,12 @@ using Darts;
 
 namespace CS_ASP_045_DartsChallenge_final
 {
-    public static class int Score
+    public static class Score
     {
             
         //Get the values:
 
-        Throw(int baseScore) = Base64FormattingOptions; 
+        //Throw(int baseScore) = Base64FormattingOptions; 
 
         // int Multiplier() - for rings ... inner (3x baseScore) outer (2x baseScore)
 

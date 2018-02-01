@@ -6,73 +6,66 @@ using System.Threading.Tasks;
 
 namespace Darts
 {
-    public class Dart
+    public class Dart // will need to be in library called "Darts"
+
     {
-        // sg/ single job determine where dart lands
+        public int DartLocation { get; set; }
+        public bool DartOuterBullseye { get; set; }
+        public bool DartInnerBullseye { get; set; }
+        public bool DartOuterRing { get; set; }
+        public bool DartInnerRing { get; set; }
+        //public bool Bullseye { get; set; }
 
-        // do I need a Player property?
-        public string Player { get; set; }
-        public int BaseScore { get; set; }
-
-        //  -- use a Ternary??
-        public bool InnerBullseye { get; set; }
-        public bool OuterBullseye { get; set; }
-        public bool InnerRing { get; set; }
-        public bool OuterRing { get; set; }
-
-
-        // constructor to instaniate with base value
-        public Dart()
-        {
-            this.Player = "";
-            this.BaseScore = -1;
-            this.InnerBullseye = false;
-            this.OuterBullseye = false;
-            this.InnerRing = false;
-            this.OuterRing = false;
-           
-        }
 
         Random randomDart = new Random();
 
-        public int Throw(out int baseScore)
-        {
-            // add 1 into number to account for -1 instantiation
-            baseScore = randomDart.Next(0, 21);
 
-            if (baseScore == 0)
-            {   InOutBullseye();  }
-            else
-            {   InOutRing();      }
-            
-            return baseScore+1;
+        public void Throw()
+        {
+            GetRandomDartLocation();
+            IsBullseyeOrRing();
+            //IsInnerRing();
         }
 
 
-        public bool InOutBullseye()
-        {
-            int bullseye = randomDart.Next(1, 21);
-            // Req: 5% for inner Bullseye
-            if (bullseye == 7)
-                return InnerBullseye = true;
-            else
-                return OuterBullseye = true;
-        }
+        // this could go inside Throw()? But not single principle
+        public int GetRandomDartLocation()
+        { return this.DartLocation = randomDart.Next(0, 21); }
 
-         
-        public bool InOutRing()
+
+
+        public void IsBullseyeOrRing()
         {
-            int rings = randomDart.Next(1, 21);
-            // Req: 5% for each ring
-            if (rings == 7)
-                return InnerRing = true;
-            if (rings == 14)
-                return OuterRing = true;
-            else return false;
+            if (this.DartLocation == 0)
+                IsInnerBullseye();
+            else IsRing();
         }
 
 
 
-        // need a way to return player score and keep going until sxore met.
+        public bool IsInnerBullseye()
+        {
+            int bullseyeType = randomDart.Next(1, 21);
+
+            if (bullseyeType == 14) return this.DartInnerBullseye = true;
+            else return this.DartOuterBullseye = true;
+        }
+
+
+
+        public bool IsRing()
+        {
+            int ringsType = randomDart.Next(1, 21);
+
+            if (ringsType == 7) return this.DartInnerRing = true;
+            if (ringsType == 16) return this.DartOuterRing = true;
+            if (ringsType != 7 || ringsType != 16)
+                this.DartInnerRing = false;
+            return this.DartOuterRing = false;   // tested w/true to make sure it was reached
+            // this solution seems awkward. But works beautifully.
+            // even when inner ring !7 or !14 set to true, overrided when true.
+        }
+
+
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Darts
 {
-    public class Dart // will need to be in library called "Darts"
+    public class Dart
 
     {
         public int DartLocation { get; set; }
@@ -15,19 +15,19 @@ namespace Darts
         public bool DartInnerBullseye { get; set; }
         public bool DartOuterRing { get; set; }
         public bool DartInnerRing { get; set; }
-
+ 
         Random randomDart = new Random();
 
 
+
         public void Throw()
-        {
-            GetRandomDartLocation();
-            IsBullseyeOrRing();
-        }
+        {   GetRandomDartLocation();
+            IsBullseyeOrRing();     }
 
 
         public int GetRandomDartLocation()
-        { return this.DartLocation = randomDart.Next(0, 21); }
+        { return this.DartLocation = randomDart.Next(0,21); }
+
 
 
 

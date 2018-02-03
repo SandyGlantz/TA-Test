@@ -29,7 +29,7 @@ namespace CS_ASP_045_DartsChallenge_final
             player2.DartLandingScore = 0;
             player2.GameScore = coinflip.Next(0, 21); // hack to counter (not) random tie issue
 
-
+            
 
             while (player1.GameScore < 301 || player2.GameScore < 301)
             {
@@ -40,6 +40,9 @@ namespace CS_ASP_045_DartsChallenge_final
             FinalScore(player1, player2);
 
         }
+
+
+
 
 
         public string FinalScore(Game gamerA, Game gamerB)

@@ -49,6 +49,15 @@ namespace CS_ASP_051_StudentCourseChallenge_final {
         protected global::System.Web.UI.WebControls.Button assignment2v2Button;
         
         /// <summary>
+        /// assignment2v3Button control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button assignment2v3Button;
+        
+        /// <summary>
         /// assignment3Button control.
         /// </summary>
         /// <remarks>

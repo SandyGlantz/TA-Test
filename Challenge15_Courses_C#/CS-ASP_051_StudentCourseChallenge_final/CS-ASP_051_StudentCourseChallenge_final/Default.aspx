@@ -21,12 +21,17 @@
     
         <br class="auto-style2" />
         <asp:Button ID="assignment1Button" runat="server" CssClass="auto-style2" OnClick="assignment1Button_Click" Text="Assignment 1" Width="400px" />
+        <br />
         <br class="auto-style2" />
         <br class="auto-style2" />
         <asp:Button ID="assignment2Button" runat="server" CssClass="auto-style2" OnClick="assignment2Button_Click" Text="Assignment 2" Width="400px" />
         <br />
         <br />
         <asp:Button ID="assignment2v2Button" runat="server" CssClass="auto-style2" OnClick="assignment2v2Button_Click" Text="Assignment 2v.2" Width="400px" />
+        <br class="auto-style2" />
+        <br class="auto-style2" />
+        <asp:Button ID="assignment2v3Button" runat="server" CssClass="auto-style2" OnClick="assignment2v3Button_Click" Text="Assignment 2v.3" Width="400px" />
+        <br />
         <br class="auto-style2" />
         <br class="auto-style2" />
         <asp:Button ID="assignment3Button" runat="server" CssClass="auto-style2" OnClick="assignment3Button_Click" Text="Assignment 3" Width="400px" />

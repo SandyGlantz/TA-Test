@@ -218,7 +218,8 @@ namespace CS_ASP_051_StudentCourseChallenge_final
 
 
             // *Object* Initialization  
-            // Above (v.1) put courses directly into the Student class, Courses<> prop
+            // Above (v.1) uses only Collection Initializers 
+            // That put courses directly into the Student class, Courses<> prop
 
             // List<Course> course = new List<Course>();
             var course = new List<Course>();
@@ -240,7 +241,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
 
 
                 {1042, new Student
-                    { StudentId = 1042, Name = "Misty",
+                    { StudentId = 1042, Name = "FurBall",
                         Courses = new List<Course>
                         { course.ElementAt(1), course.ElementAt(2)}
                     }
@@ -276,6 +277,89 @@ namespace CS_ASP_051_StudentCourseChallenge_final
             resultLabel.Text += "<br/><br/>";
 
         }
+
+
+
+
+// ========================   BUTTON 2 -- Version 3   ========================
+
+        protected void assignment2v3Button_Click(object sender, EventArgs e)
+        {
+            // See requirements in earlier versions
+            // This is the solution approach from the Instructor
+            // Better code - but ?? misses requirement of List Object Initialization 
+            // ... or ... is this "just" object initialization without the list, see:
+            // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer 
+
+
+            resultLabel.Text = "<br/><br/><hr><br/><br/>";
+
+
+            // creates three courses for reuse across student dictionary...
+
+            Course indoorScratching = new Course()
+            { CourseId = 120, Name = "Indoor Scratching Selection" };
+
+            Course kittenWeaning = new Course()
+            { CourseId = 121, Name = "Kitten Development Post Weaning" };
+
+            Course advancedPlay = new Course()
+            { CourseId = 122, Name = "Advanced Strategies for String Play" };
+
+
+            // and the Dictionary of Students ...
+            // Dictionary<int, Student> students = new Dictionary<int, Student>()
+
+            var students = new Dictionary<int, Student>()
+            {
+                {1, new Student
+                {
+                    StudentId = 1051, Name = "Felix",
+                    Courses = new List<Course> {indoorScratching, advancedPlay }
+                } },
+
+                // note the int can be anything "{*1*, new Student "
+                //     - EXCEPT not duplicated
+                // int shown here as 1, 2, and 3 does not have to match the course
+                // like in SQL - it's just a unique key
+                // keeping it the course number would allow for better searching though ...
+
+                {2, new Student
+                {
+                    StudentId = 1052, Name = "Shadow",
+                    Courses = new List<Course> {indoorScratching, kittenWeaning }
+                } },
+
+                {3, new Student
+                {
+                    StudentId = 1051, Name = "Baby",
+                    Courses = new List<Course> {kittenWeaning, advancedPlay }
+                } }
+            }; // end Dictionary
+
+
+            // foreach (KeyValuePair<int, Student> student in students)
+            foreach (var student in students)
+            {
+                resultLabel.Text += string.Format
+                    ("<br/><b>Student: {0}</b> (student ID: {1})<br/>",
+                    student.Value.Name, student.Value.StudentId);
+
+                //foreach (Course courses in student.Value.Courses)
+                foreach (var courses in student.Value.Courses)
+                {
+                    resultLabel.Text += string.Format
+                        ("&nbsp&nbsp Course: {0} (course ID: {1})<br/>",
+                        courses.Name, courses.CourseId);
+                }
+
+            };
+
+                resultLabel.Text += "<br/><br/>";
+
+        }
+
+
 
 
 
@@ -372,9 +456,6 @@ namespace CS_ASP_051_StudentCourseChallenge_final
             resultLabel.Text += "<br/><br/>";
 
         }
-
-
-
 
 
     }

@@ -177,6 +177,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
 
 
             // purposefully changed the look - but included all required values.
+            // foreach (KeyValuePair<int, Student> student in students)
             foreach (var student in students)
             {
                 resultLabel.Text += string.Format
@@ -217,9 +218,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
 
 
             // *Object* Initialization  
-            // create courses first to be able to use Object Initializing
             // Above (v.1) put courses directly into the Student class, Courses<> prop
-
 
             // List<Course> course = new List<Course>();
             var course = new List<Course>();
@@ -257,7 +256,8 @@ namespace CS_ASP_051_StudentCourseChallenge_final
             }; // end Dictionary<>
 
 
-            // ?? what would var be spelled out? How to show Dictionary as a data type?
+            // ?? why is var this format:
+            // foreach (KeyValuePair<int, Student> student in students)
             foreach (var student in students)
             {
                 resultLabel.Text += string.Format

@@ -11,51 +11,61 @@ namespace CS_ASP_051_StudentCourseChallenge_final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            // It works ... but need tweaks ...
-
-            // To Do:
-            // Fix ReportCard v Grades v grade v messed up naming conventions
-            // Only used Collection Initializer in Button 2:
-                // add button four and do a version w/ collection and object initialization
-            // Run on Mac for bigger screen - then consolidate lines ... 
-                // this is too spread out to be easily readable
-
-
-
+// ========================   Code Notes   ========================
+            /*
+             * Typically prefer scrunched code, but on this project
+             * the code is spread out to keep track of all the "{" and "}"
+             * 
+             * Added a version two (v.2) on the second button/assignment.
+             * Original only used Collection Initializer.
+             * Requirement was to use Collection AND Object Initializer.
+            */
         }
 
 
 
+
+
+// ========================   BUTTON 1   ========================
+
         protected void assignment1Button_Click(object sender, EventArgs e)
         {
-            /*
-            * Create a List of Courses (add three example Courses ...
-            * make up the details).  Each Course should have at least two
-            * Students enrolled in them.  Use Object and Collection
-            * Initializers.  Then, iterate through each Course and print
-            * out the Course's details and the Students that are enrolled in
-            * each Course.
+            /* 
+            * Challenge Requirements:
+            * 
+            * Create a List of three Courses.
+            * Each Course should have at least two Students enrolled.
+            * Use Object and Collection Initializers.
+            * Iterate through each Course and print out the:
+            * Course details 
+            * and the Students that are enrolled in each Course.
+            * 
+            * NOTE: !!
+            * 
+            * Stated Challenge criteria is to use Object *AND* Collection Initializers
+            * NOT used in instructor's solution - so leaving mine as is ...
+            * Just used Collection (and a collection within a collection at that!)
+            *  
             */
 
             // cosmetics ...
             resultLabel.Text = "<br/><br/><hr><br/>";
 
 
-            // local variable declaration
-            var result = "";
-
-
             // Collection initialization
+            // List<Course> courses = new List<Course>() --> replaced w/var 
+
             var courses = new List<Course>()
-            //List<Course> courses = new List<Course>()
+            
             {
                 new Course
                 { CourseId = 101, Name="Claw Sharpening",
                     Students = new List<Student>()
                     {
-                        new Student() { StudentId = 1010, Name = "Mittens" },
-                        new Student() { StudentId = 1011, Name = "Tom" }
+                        new Student()
+                            { StudentId = 1010, Name = "Mittens" },
+                        new Student()
+                            { StudentId = 1011, Name = "Tom" }
                     }
                 },
 
@@ -76,16 +86,21 @@ namespace CS_ASP_051_StudentCourseChallenge_final
                         new Student() { StudentId = 1016, Name = "Bob" }
                     }
                 }
-            };
+            }; //end List<>
 
 
-            // purposefully changed the look - but included all required values.
-            //foreach (Course course in courses)
+            // purposefully changed the look - but included all required values.           
+            // foreach (Course course in courses)
+
             foreach (var course in courses)
             {
                 resultLabel.Text += string.Format
                     ("<br/><br/><b>Course: {0}</b> (course ID: {1})", 
                     course.Name, course.CourseId);
+
+                // foreach inside of a foreach ...
+                // foreach (Student student in course.Students)
+
                 foreach (var student in course.Students)
                 {
                     resultLabel.Text += string.Format
@@ -93,8 +108,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
                         student.Name, student.StudentId);
                 }
             }
-            // put resultLabel in place of result above ... two less lines of code ...
-            //resultLabel.Text = result;
+
             resultLabel.Text += "<br/><br/>";
 
         }
@@ -106,18 +120,18 @@ namespace CS_ASP_051_StudentCourseChallenge_final
 
 
 
-
+// ========================   BUTTON 2 -- Original Version   ========================
 
         protected void assignment2Button_Click(object sender, EventArgs e)
         {
             /*
-             * Create a Dictionary of Students (add three example Students
-             * ... make up the details).  Use the StudentId as the 
-             * key.  Each student must be enrolled in two Courses.  Use
-             * Object and Collection Initializers.  Then, iterate through
-             * each student and print out to the web page each Student's
-             * info and the Courses the Student is enrolled in.
-             */
+            * Create a Dictionary of three Students.
+            * Use the StudentId as the key.
+            * Each student must be enrolled in two Courses.
+            * Use Object and Collection Initializers.   
+            * Iterate through each student and print out to the web page:
+            * each Student's info -- and the Courses the Student is enrolled in.
+            */
 
 
             // cosmetics ...
@@ -125,6 +139,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
 
 
             // Collection initialization
+
             Dictionary<int, Student> students = new Dictionary<int, Student>()
             {
                 {1020, new Student()
@@ -157,8 +172,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
                             }
                 }
                 }
-
-            };
+            }; //end Dictionary<>
 
 
             // purposefully changed the look - but included all required values.
@@ -171,7 +185,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
                 foreach (var course in student.Value.Courses)
                 {
                     resultLabel.Text += string.Format
-                        ("&nbsp&nbsp Course: {0} (course ID: {1}<br/>",
+                        ("&nbsp&nbsp Course: {0} (course ID: {1})<br/>",
                         course.Name, course.CourseId);
                 }
             }
@@ -181,22 +195,99 @@ namespace CS_ASP_051_StudentCourseChallenge_final
         }
 
 
-            
-            
-            
-            
-            
-            
-            protected void assignment3Button_Click(object sender, EventArgs e)
+
+// ========================   BUTTON 2 -- Version 2   ========================
+
+        protected void assignment2v2Button_Click(object sender, EventArgs e)
         {
             /*
-             * We need to keep track of each Student's grade (0 to 100) in a 
-             * particular Course.  This means at a minimum, you'll need to add 
-             * another class, and depending on your implementation, you will 
-             * probably need to modify the existing classes to accommodate this 
-             * new requirement.  Give each Student a grade in each Course they
-             * are enrolled in (make up the data).  Then, for each student, 
-             * print out each Course they are enrolled in and their grade.
+            * Create a Dictionary of three Students.
+            * Use the StudentId as the key.
+            * Each student must be enrolled in two Courses.
+            * ==> Use Object ***and*** Collection Initializers.   
+            * Iterate through each student and print out to the web page:
+            * each Student's info -- and the Courses the Student is enrolled in.
+            */
+
+
+            // cosmetics ...
+            resultLabel.Text = "<br/><br/><hr><br/><br/>";
+
+
+            // *Object* Initialization  
+            // create courses first to be able to use Object Initializing
+            // Above (v.1) put courses directly into the Student class, Courses<> prop
+
+            
+            List<Course> course = new List<Course>();
+            course.Add(new Course { CourseId = 117, Name = "Territory Marking for Success" });
+            course.Add(new Course { CourseId = 118, Name = "Professional Collar Escapes" });
+            course.Add(new Course { CourseId = 119, Name = "Overcoming Physics of Falling" });
+
+
+            Dictionary<int, Student> students = new Dictionary<int, Student>()
+            {
+                {1041, new Student
+                    { StudentId = 1041, Name = "Misty",
+                        Courses = new List<Course>
+                        { course.ElementAt(0), course.ElementAt(1)}
+                    }
+                },
+
+
+                {1042, new Student
+                    { StudentId = 1042, Name = "Misty",
+                        Courses = new List<Course>
+                        { course.ElementAt(1), course.ElementAt(2)}
+                    }
+                },
+
+
+                { 1043, new Student
+                    { StudentId = 1043, Name = "Mr. Whiskers",
+                        Courses = new List<Course>
+                        { course.ElementAt(2), course.ElementAt(0)}
+                    }
+                }
+            }; // end Dictionary<>
+
+
+            // ?? what would var be spelled out? How to show Dictionary as a data type?
+            foreach (var student in students)
+            {
+                resultLabel.Text += string.Format
+                    ("<br/><b>Student: {0}</b> (student ID: {1})<br/>", 
+                    student.Value.Name, student.Value.StudentId);
+
+                foreach (var courses in student.Value.Courses)
+                {
+                    resultLabel.Text += string.Format
+                        ("&nbsp&nbsp Course: {0} (course ID: {1})<br/>", 
+                        courses.Name, courses.CourseId);
+                }
+            }
+
+            resultLabel.Text += "<br/><br/>";
+
+        }
+
+
+
+
+
+// ========================   BUTTON 3   ========================
+
+        protected void assignment3Button_Click(object sender, EventArgs e)
+        {
+            /*
+             * Keep track of three Student's grades (0 to 100) -- in two Courses.
+             * 
+             * This means at a minimum, you'll need to add another class, 
+             * and probably need to modify the existing classes to accommodate this. 
+             * 
+             * Give each Student a grade in each Course they are enrolled in.
+             * Iterate through each student and print out to the web page:
+             *  each Course they are enrolled in -- and the grade.
              */
 
 
@@ -251,14 +342,14 @@ namespace CS_ASP_051_StudentCourseChallenge_final
                         }
                     }
                 }
-
-            };
+            }; // end List<>
 
 
             // purposefully changed the look - but included all required values.
             foreach (var student in students)
             {
-                resultLabel.Text += string.Format("<br/><br/><b> Student: {0}</b> (student ID: {1})",
+                resultLabel.Text += string.Format
+                    ("<br/><br/><b> Student: {0}</b> (student ID: {1})",
                     student.Name, student.StudentId);
                  
                 foreach (var grades in student.Grades)
@@ -272,5 +363,10 @@ namespace CS_ASP_051_StudentCourseChallenge_final
             resultLabel.Text += "<br/><br/>";
 
         }
+
+
+
+
+
     }
 }

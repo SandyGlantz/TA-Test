@@ -139,8 +139,9 @@ namespace CS_ASP_051_StudentCourseChallenge_final
 
 
             // Collection initialization
+            // Dictionary<int, Student>
 
-            Dictionary<int, Student> students = new Dictionary<int, Student>()
+            var students = new Dictionary<int, Student>()
             {
                 {1020, new Student()
                 {StudentId= 1020, Name= "Morris",
@@ -182,6 +183,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
                     ("<br/><b>Student: {0}</b> (student ID: {1})<br/>",
                     student.Value.Name, student.Value.StudentId);
 
+                // foreach (Course course in student.Value.Courses)
                 foreach (var course in student.Value.Courses)
                 {
                     resultLabel.Text += string.Format
@@ -218,16 +220,19 @@ namespace CS_ASP_051_StudentCourseChallenge_final
             // create courses first to be able to use Object Initializing
             // Above (v.1) put courses directly into the Student class, Courses<> prop
 
-            
-            List<Course> course = new List<Course>();
+
+            // List<Course> course = new List<Course>();
+            var course = new List<Course>();
             course.Add(new Course { CourseId = 117, Name = "Territory Marking for Success" });
             course.Add(new Course { CourseId = 118, Name = "Professional Collar Escapes" });
             course.Add(new Course { CourseId = 119, Name = "Overcoming Physics of Falling" });
 
 
-            Dictionary<int, Student> students = new Dictionary<int, Student>()
+            //Dictionary<int, Student> students = new Dictionary<int, Student>()
+            var students = new Dictionary<int, Student>()
             {
-                {1041, new Student
+                {
+                    1041, new Student
                     { StudentId = 1041, Name = "Misty",
                         Courses = new List<Course>
                         { course.ElementAt(0), course.ElementAt(1)}
@@ -259,6 +264,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
                     ("<br/><b>Student: {0}</b> (student ID: {1})<br/>", 
                     student.Value.Name, student.Value.StudentId);
 
+                //foreach (Course courses in student.Value.Courses)
                 foreach (var courses in student.Value.Courses)
                 {
                     resultLabel.Text += string.Format
@@ -295,7 +301,8 @@ namespace CS_ASP_051_StudentCourseChallenge_final
             resultLabel.Text = "<br/><br/><hr><br/>";
 
 
-            List<Student> students = new List<Student>()
+            // List<Student> students = new List<Student>()
+            var students = new List<Student>()
             {
                 new Student()
                 {
@@ -346,12 +353,14 @@ namespace CS_ASP_051_StudentCourseChallenge_final
 
 
             // purposefully changed the look - but included all required values.
+            // foreach (Student student in students)
             foreach (var student in students)
             {
                 resultLabel.Text += string.Format
                     ("<br/><br/><b> Student: {0}</b> (student ID: {1})",
                     student.Name, student.StudentId);
-                 
+
+                // foreach (ReportCard grades in student.Grades)
                 foreach (var grades in student.Grades)
                 {
                     resultLabel.Text += string.Format

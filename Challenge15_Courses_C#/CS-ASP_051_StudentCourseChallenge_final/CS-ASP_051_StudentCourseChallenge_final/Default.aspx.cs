@@ -49,7 +49,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
             */
 
             // cosmetics ...
-            resultLabel.Text = "<br/><br/><hr><br/>";
+            resultLabel.Text = "<hr><br/>";
 
 
             // Collection initialization
@@ -83,7 +83,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
                     Students = new List<Student>()
                     {
                         new Student() { StudentId = 1015, Name = "Boots" },
-                        new Student() { StudentId = 1016, Name = "Bob" }
+                        new Student() { StudentId = 1016, Name = "BobCat" }
                     }
                 }
             }; //end List<>
@@ -135,7 +135,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
 
 
             // cosmetics ...
-            resultLabel.Text = "<br/><br/><hr><br/><br/>";
+            resultLabel.Text = "<hr><br/><br/>";
 
 
             // Collection initialization
@@ -214,7 +214,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
 
 
             // cosmetics ...
-            resultLabel.Text = "<br/><br/><hr><br/><br/>";
+            resultLabel.Text = "<hr><br/><br/>";
 
 
             // *Object* Initialization  
@@ -292,7 +292,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
             // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer 
 
 
-            resultLabel.Text = "<br/><br/><hr><br/><br/>";
+            resultLabel.Text = "<hr><br/><br/>";
 
 
             // creates three courses for reuse across student dictionary...
@@ -332,7 +332,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
 
                 {3, new Student
                 {
-                    StudentId = 1051, Name = "Baby",
+                    StudentId = 1053, Name = "Baby",
                     Courses = new List<Course> {kittenWeaning, advancedPlay }
                 } }
             }; // end Dictionary
@@ -381,8 +381,9 @@ namespace CS_ASP_051_StudentCourseChallenge_final
              */
 
 
-            // cosmetics ...
-            resultLabel.Text = "<br/><br/><hr><br/>";
+
+        // cosmetics ...
+        resultLabel.Text = "<hr><br/>";
 
 
             // List<Student> students = new List<Student>()
@@ -402,6 +403,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
                         }
                     }
                 },
+
 
                 new Student()
                 {
@@ -436,7 +438,7 @@ namespace CS_ASP_051_StudentCourseChallenge_final
             }; // end List<>
 
 
-            // purposefully changed the look - but included all required values.
+            
             // foreach (Student student in students)
             foreach (var student in students)
             {
@@ -455,8 +457,71 @@ namespace CS_ASP_051_StudentCourseChallenge_final
 
             resultLabel.Text += "<br/><br/>";
 
-        }
+        } // end button 3 v1
 
 
-    }
-}
+
+
+
+
+// ========================   BUTTON 3, Version 2   ========================
+
+        protected void assignment3v2Button_Click(object sender, EventArgs e)
+        {
+            // See previous for requirements
+            // doing second verison for practice
+
+
+            // cosmetics ...
+            resultLabel.Text = "<hr><br/>";
+
+
+
+            // create access to class Student properties
+            Student student = new Student();
+
+
+            // create a new student to have the grades
+            student.StudentId = 1062;
+            student.Name = "Socks";
+
+            // creates the student grades
+            student.Grades = new List<ReportCard>()
+            {
+                new ReportCard
+                {
+                    Grade = 40, Course = new Course
+                    {
+                        CourseId = 123, Name="Incentivize Human Staff"
+                    }
+                },              
+                
+                new ReportCard
+                {
+                    Grade = 100, Course = new Course
+                    {
+                        CourseId = 124, Name = "Drama 101: Expressive Meowing"
+                    }
+                }               
+            }; // end List<>
+
+
+            resultLabel.Text += string.Format
+                ("<br/><br/><b> Student: {0}</b> (student ID: {1})",
+                    student.Name, student.StudentId);
+
+            foreach (ReportCard grades in student.Grades)
+            {
+                resultLabel.Text += string.Format
+                        ("<br>&nbsp&nbsp<b> Grade: {0}</b>, Course: {1}, (Course ID: {2})",
+                        grades.Grade, grades.Course.Name, grades.Course.CourseId);
+            }
+            
+
+            resultLabel.Text += "<br/><br/>";
+
+        } // end button 3v2
+
+
+    } // end Default class
+} // end namespace

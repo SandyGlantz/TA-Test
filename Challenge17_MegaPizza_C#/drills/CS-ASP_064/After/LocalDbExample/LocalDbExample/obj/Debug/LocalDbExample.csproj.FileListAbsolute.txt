@@ -1,0 +1,32 @@
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\obj\Debug\LocalDbExample.csprojResolveAssemblyReference.cache
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\LocalDbExample.dll.config
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\LocalDbExample.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\LocalDbExample.pdb
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\EntityFramework.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\EntityFramework.SqlServer.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\EntityFramework.xml
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\EntityFramework.SqlServer.xml
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\obj\Debug\LocalDbExample.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\obj\Debug\LocalDbExample.pdb
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\LocalDbExample.Domain.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\LocalDbExample.Domain.pdb
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\LocalDbExample.Persistence.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\LocalDbExample.Persistence.pdb
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\LocalDbExample.DTO.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\LocalDbExample.DTO.pdb
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\bin\LocalDbExample.dll.config
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\bin\LocalDbExample.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\bin\LocalDbExample.pdb
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\bin\EntityFramework.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\bin\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\bin\LocalDbExample.Domain.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\bin\LocalDbExample.DTO.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\bin\LocalDbExample.Persistence.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\bin\LocalDbExample.Domain.pdb
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\bin\LocalDbExample.DTO.pdb
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\bin\EntityFramework.xml
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\bin\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\bin\LocalDbExample.Persistence.pdb
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\obj\Debug\LocalDbExample.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\obj\Debug\LocalDbExample.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample\obj\Debug\LocalDbExample.pdb

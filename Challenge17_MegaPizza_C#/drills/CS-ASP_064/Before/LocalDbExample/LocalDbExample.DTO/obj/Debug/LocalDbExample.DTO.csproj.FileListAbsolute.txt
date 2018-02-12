@@ -1,0 +1,5 @@
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.DTO\bin\Debug\LocalDbExample.DTO.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.DTO\bin\Debug\LocalDbExample.DTO.pdb
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.DTO\obj\Debug\LocalDbExample.DTO.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.DTO\obj\Debug\LocalDbExample.DTO.pdb
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.DTO\obj\Debug\LocalDbExample.DTO.csprojResolveAssemblyReference.cache

@@ -22,7 +22,6 @@ namespace CS_ASP_051b_MegaWar_PC_final
 
 
 
-
 // This was to test the cards were dealt out randomly
 
             Game game = new Game("Kitten", "Puppy");

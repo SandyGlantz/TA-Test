@@ -1,0 +1,8 @@
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.DTO\bin\Debug\LocalDbExample.DTO.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.DTO\bin\Debug\LocalDbExample.DTO.pdb
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.DTO\obj\Debug\LocalDbExample.DTO.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.DTO\obj\Debug\LocalDbExample.DTO.pdb
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample.DTO\bin\Debug\LocalDbExample.DTO.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample.DTO\bin\Debug\LocalDbExample.DTO.pdb
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample.DTO\obj\Debug\LocalDbExample.DTO.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\After\LocalDbExample\LocalDbExample.DTO\obj\Debug\LocalDbExample.DTO.pdb

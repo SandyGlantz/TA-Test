@@ -1,0 +1,27 @@
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\obj\Debug\LocalDbExample.csprojResolveAssemblyReference.cache
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\LocalDbExample.dll.config
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\LocalDbExample.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\LocalDbExample.pdb
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\EntityFramework.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\EntityFramework.SqlServer.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\EntityFramework.xml
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\bin\EntityFramework.SqlServer.xml
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\obj\Debug\LocalDbExample.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample\obj\Debug\LocalDbExample.pdb
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample\LocalDbExample\bin\LocalDbExample.dll.config
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample\LocalDbExample\bin\LocalDbExample.dll
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample\LocalDbExample\bin\LocalDbExample.pdb
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample\LocalDbExample\bin\EntityFramework.xml
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample\LocalDbExample\bin\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample\LocalDbExample\obj\Debug\LocalDbExample.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample\LocalDbExample\obj\Debug\LocalDbExample.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample\LocalDbExample\obj\Debug\LocalDbExample.dll
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample\LocalDbExample\obj\Debug\LocalDbExample.pdb
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample 60v\LocalDbExample\bin\LocalDbExample.dll.config
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample 60v\LocalDbExample\bin\LocalDbExample.dll
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample 60v\LocalDbExample\bin\LocalDbExample.pdb
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample 60v\LocalDbExample\bin\EntityFramework.xml
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample 60v\LocalDbExample\bin\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample 60v\LocalDbExample\obj\Debug\LocalDbExample.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample 60v\LocalDbExample\obj\Debug\LocalDbExample.dll
+\\Mac\Home\Documents\1_temp_Csharp\Challenge17_MegaPapaBobsCODE\CS-ASP_059_Code - LocalDbExample 60v\LocalDbExample\obj\Debug\LocalDbExample.pdb

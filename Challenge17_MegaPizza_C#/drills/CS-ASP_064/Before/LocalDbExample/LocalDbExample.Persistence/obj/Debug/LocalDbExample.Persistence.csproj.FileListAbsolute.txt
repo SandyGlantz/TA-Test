@@ -1,0 +1,12 @@
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.Persistence.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.Persistence.pdb
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.Persistence\obj\Debug\LocalDbExample.Persistence.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.Persistence\obj\Debug\LocalDbExample.Persistence.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.Persistence\obj\Debug\LocalDbExample.Persistence.pdb
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.Persistence.dll.config
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.xml
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.DTO.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_064\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.DTO.pdb

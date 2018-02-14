@@ -1,0 +1,36 @@
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.Persistence.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.Persistence.pdb
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.Persistence\obj\Debug\LocalDbExample.Persistence.csprojResolveAssemblyReference.cache
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.Persistence\obj\Debug\LocalDbExample.Persistence.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.Persistence\obj\Debug\LocalDbExample.Persistence.pdb
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.Persistence.dll.config
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.xml
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.DTO.dll
+C:\Users\bob_000\documents\visual studio 2013\Projects\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.DTO.pdb
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.Persistence.dll.config
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.Persistence.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.Persistence.pdb
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.DTO.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.DTO.pdb
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.xml
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\obj\Debug\LocalDbExample.Persistence.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\obj\Debug\LocalDbExample.Persistence.dll
+\\Mac\Home\Documents\1_temp_Csharp\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\obj\Debug\LocalDbExample.Persistence.pdb
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\drills\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.Persistence.dll.config
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\drills\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.Persistence.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\drills\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.Persistence.pdb
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\drills\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\drills\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\drills\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.DTO.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\drills\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\LocalDbExample.DTO.pdb
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\drills\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.xml
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\drills\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\bin\Debug\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\drills\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\obj\Debug\LocalDbExample.Persistence.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\drills\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\obj\Debug\LocalDbExample.Persistence.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\drills\CS-ASP_065v3\Before\LocalDbExample\LocalDbExample.Persistence\obj\Debug\LocalDbExample.Persistence.pdb

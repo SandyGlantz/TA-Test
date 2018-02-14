@@ -1,0 +1,12 @@
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.Data\bin\Debug\KittyPizza.Data.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.Data\bin\Debug\KittyPizza.Data.pdb
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.Data\obj\Debug\KittyPizza.Data.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.Data\obj\Debug\KittyPizza.Data.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.Data\obj\Debug\KittyPizza.Data.pdb
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.Data\bin\Debug\KittyPizza.DTO.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.Data\bin\Debug\KittyPizza.DTO.pdb
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.Data\bin\Debug\KittyPizza.Data.dll.config
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.Data\bin\Debug\EntityFramework.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.Data\bin\Debug\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.Data\bin\Debug\EntityFramework.xml
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.Data\bin\Debug\EntityFramework.SqlServer.xml

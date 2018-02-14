@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KittyPizzaDbModelStoreContainer" CdmEntityContainer="KittyPizzaDbEntities">
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="KittyPizzaDbModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Crust" ColumnName="Crust" />
+          <ScalarProperty Name="Mouse" ColumnName="Mouse" />
+          <ScalarProperty Name="Goldfish" ColumnName="Goldfish" />
+          <ScalarProperty Name="Catnip" ColumnName="Catnip" />
+          <ScalarProperty Name="Grass" ColumnName="Grass" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PizzaPriceLookupTables">
+      <EntityTypeMapping TypeName="KittyPizzaDbModel.PizzaPriceLookupTable">
+        <MappingFragment StoreEntitySet="PizzaPriceLookupTable">
+          <ScalarProperty Name="GrassCost" ColumnName="GrassCost" />
+          <ScalarProperty Name="CatnipCost" ColumnName="CatnipCost" />
+          <ScalarProperty Name="GoldfishCost" ColumnName="GoldfishCost" />
+          <ScalarProperty Name="MouseCost" ColumnName="MouseCost" />
+          <ScalarProperty Name="RegularCrustCost" ColumnName="RegularCrustCost" />
+          <ScalarProperty Name="ThinCrustCost" ColumnName="ThinCrustCost" />
+          <ScalarProperty Name="ThickCrustCost" ColumnName="ThickCrustCost" />
+          <ScalarProperty Name="LargeSizeCost" ColumnName="LargeSizeCost" />
+          <ScalarProperty Name="MediumSizeCost" ColumnName="MediumSizeCost" />
+          <ScalarProperty Name="SmallSizeCost" ColumnName="SmallSizeCost" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

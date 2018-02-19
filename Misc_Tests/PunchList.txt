@@ -1,0 +1,76 @@
+
+CS-ASP_70_Mega-Challenge Pizza
+
+
+
+TO DO/Fix:
+
+1. I missed an M someplace and the dollar amounts in the Order Management screen are decimal rather than dollars.
+
+2. Place tiny link on home page for quick access to Order Management Screen.
+
+3. Figure out why Grass doesn’t add $1 like it’s supposed to
+4. Ditto Thick Crust.
+
+Have already:
+- Fixed spot where the thick crust was listed as thin crust and FIXED it.
+Instructor noted that once you set a bad value it can not work right, even when you fix it.  REALLY would strongly prefer to not redo entire exercise.
+- Have tested the values are set right in the db.  Changed other values and those values came through.  So it’s not the db.
+- In the default.aspx: Copied the working code from a working add-on (catnip) into the place of the Grass - and it still doesn’t worked right 
+- Have gone through all the mapping on all three layers.
+- Re-typed all the mapping from scratch to make sure I wasn’t staring right at it.
+
+— Can’t copy & paste from solution since I did my own thing :-/ 
+(Pros and cons)
+
+- NONE of the crust types will pass a value from the db (if changed)
+
+
+Ideas:
+Toss the packages file and open COPY OF solution in VS17
+Toss the Db and put a new one in
+Start over … and write this 1,000 times:  I will commit more frequently.  
+I will commit more frequently. 
+I will commit more frequently. 
+I will commit more frequently. 
+I will commit more frequently. 
+I will commit more frequently. 
+I will commit more frequently. 
+I will commit more frequently. 
+I will commit more frequently. 
+
+Sigh …
+
+Idea from the forums:
+
+Instead of adding a database table to keep track of pricing, I included the prices in the Web.Config file of the web application. I wrote the following code:
+
+<appsettings>
+<add key="smallPizzaCost" value="12.0"/>
+<add key="mediumPizzaCost" value="14.0"/>
+<add key="largePizzaCost" value="16.0"/>
+<add key="thinCrustCost" value="0.0"/>
+<add key="regularCrustCost" value="0.0"/>
+<add key="thickCrustCost" value="2.0"/>
+<add key="sausageCost" value="2.0"/>
+<add key="pepperoniCost" value="1.5"/>
+<add key="onionsCost" value="1.0"/>
+<add key="greenPeppersCost" value="1.0"/>
+</appsettings>
+
+
+In order to retrieve these values in the C# code, I added a reference to System.Configuration library and wrote the following code, which is the default constructor of the PizzaPrices class (I placed it in the domain layer)
+public PizzaPrices( )
+{
+smallPizzaCost= Convert.ToDecimal(System.Configuration.ConfigurationManager.AppSettings["smallPizzaCost"]); 
+mediumPizzaCost = Convert.ToDecimal(System.Configuration.ConfigurationManager.AppSettings["mediumPizzaCost"]);
+largePizzaCost = Convert.ToDecimal(System.Configuration.ConfigurationManager.AppSettings["largePizzaCost"]); 
+thinCrustCost = Convert.ToDecimal(System.Configuration.ConfigurationManager.AppSettings["thinCrustCost"]);
+regularCrustCost = Convert.ToDecimal(System.Configuration.ConfigurationManager.AppSettings["regularCrustCost"]); ;
+thickCrustCost = Convert.ToDecimal(System.Configuration.ConfigurationManager.AppSettings["thickCrustCost"]); ;
+sausageCost = Convert.ToDecimal(System.Configuration.ConfigurationManager.AppSettings["sausageCost"]);
+pepperoniCost = Convert.ToDecimal(System.Configuration.ConfigurationManager.AppSettings["pepperoniCost"]); ;
+onionsCost = Convert.ToDecimal(System.Configuration.ConfigurationManager.AppSettings["onionsCost"]);
+greenPeppersCost = Convert.ToDecimal(System.Configuration.ConfigurationManager.AppSettings["greenPeppersCost"]); ;
+}
+It works fine, but I guess it would be nice to add a web page where Papa Bob would be able to modify pricing easily, without having to edit the web.config file directly...

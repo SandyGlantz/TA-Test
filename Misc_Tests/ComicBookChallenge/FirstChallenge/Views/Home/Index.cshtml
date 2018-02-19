@@ -1,0 +1,28 @@
+﻿@model List<FirstChallenge.Models.ComicBook>
+
+
+@{
+    ViewBag.Title = "Not My Comic Style";
+}
+
+<h2>Not My Comic Style</h2>
+
+@foreach (var comic in Model)
+{
+    <h3>
+        @Html.ActionLink(comic.ComicTitle, "Detail",
+       new { id = comic.ComicBookId })
+    </h3>
+
+    <h4>#@comic.EpisodeNumber - @comic.EpisodeTitle</h4>
+
+    var characters = comic.Characters.Select(p => p.Name).ToArray();
+
+    // using String.Join is better than for loop because there's no trailing comma
+    var charactersString = String.Join(", ", characters);
+    <p>
+        <strong>Starring: </strong> @charactersString
+    </p>
+}
+
+

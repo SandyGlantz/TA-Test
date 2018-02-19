@@ -1,0 +1,28 @@
+﻿@model ComicBookChallenge.Models.ComicBook
+@{
+    <br />
+    var title = string.Format("Details About {0} #{1}", Model.ComicTitle, Model.EpisodeNumber);
+    ViewBag.Title = title;
+    <br />
+}
+
+<h2>@title</h2>
+<h4>Episode Title: @Model.EpisodeTitle</h4>
+
+@{
+    var characters = Model.Characters.Select(p => p.Name).ToArray();
+
+    // using String.Join is better than for loop because there's no trailing comma
+    var charactersString = String.Join(", ", characters);
+    <p>
+        <strong>Starring: </strong> @charactersString
+    </p>
+}
+
+<br />
+<hr />
+
+@Html.ActionLink("Back to All Comics", "Index")
+<br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />

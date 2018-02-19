@@ -1,0 +1,5 @@
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.DTO\bin\Debug\KittyPizza.DTO.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.DTO\bin\Debug\KittyPizza.DTO.pdb
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.DTO\obj\Debug\KittyPizza.DTO.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.DTO\obj\Debug\KittyPizza.DTO.dll
+\\Mac\Home\Documents\GitHub\TA_pc\Challenge17_MegaPizza_C#\CS-ASP_70_PizzaChallenge_final\KittyPizza.DTO\obj\Debug\KittyPizza.DTO.pdb

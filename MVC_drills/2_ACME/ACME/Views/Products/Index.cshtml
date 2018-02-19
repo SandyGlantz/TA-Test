@@ -1,0 +1,78 @@
+﻿@model IEnumerable<ACME.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<!-- Strongly typed version of auto-generated object types; line 30++ -->
+
+<p>
+    @Html.ActionLink("Create New V2", "Create")<br/>
+    @Html.ActionLink("Create New V3", "Create", 
+    new RouteValueDictionary(new { locale = "en-US", year = DateTime.Now.Year.ToString() }))
+    <br/>
+
+    @{ 
+        // version 4:
+        // IDEA is to hover over V4 and see where the URL goes and what it displays
+        var myDictionary = new Dictionary<string, object>();
+
+        myDictionary.Add("First", "A");
+        myDictionary.Add("Second", "B");
+        myDictionary.Add("Third", "C");
+    }
+    @Html.ActionLink("Create New V4", "Create", new RouteValueDictionary(myDictionary))
+</p>
+
+
+
+
+
+<p>
+    @Html.ActionLink("Create New V1", "Create")
+</p>
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            <!-- these are anonymous objects -->
+            <!-- = a way to quickly create/define object properties without formal definition -->
+            <!-- which means WEAKLY typed = no runtime errors
+                == hard to find bugs  -->
+            <!-- in this case the scaffolding auto created what amounts to value dictionaries of objects -->
+
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductId })
+
+
+
+
+
+
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,277 @@
+﻿
+<!-- notice the lowercase m in model -->
+<!-- used as directive; this is what the tpye of the view will be -->
+<!-- goes at very top of page -->
+@model List<HelloMVC.Models.Car> 
+
+
+
+
+<!-- ===================================================================== -->
+@* This is the multi (or single) line way to comment 
+    ================= COMMENTING FORMAT ==============
+    html <! etc. doesn't comment out razor
+    *@
+
+
+
+
+
+<!-- ===================================================================== -->
+
+<!-- this is a "code-block" expression using razor -->
+<!-- inside a code-block your write just like it's C# (not html) -->
+<!-- Variables declared inside acode-block are accessible throughout the page -->
+<!--      they are NOT Local to the code block -->
+@{
+    ViewBag.Title = "Index";
+    var value = 1000;
+}
+<h3>This is a variable utilized from code-block to in-line razor</h3>
+@{ 
+    value += 14;
+}
+<p>Value from variable coded with formatting: @value.ToString("C")</p>
+<!-- Note above - no ";" and formatting from C# mixed with Text not in "" -->
+
+
+
+
+
+<br/>
+<!-- ===================================================================== -->
+
+<!-- This is a "mixed expression" -->
+<!-- html markup is inside a code-block (C#) -->
+<h3>This is a mixed expression example</h3>
+@{ 
+    var name = "Senge Alexander Sterling";
+    var day = DateTime.Now.DayOfWeek.ToString();
+    <p>@name is a great name for an awesome cat.  Today is @day.</p>
+}
+
+
+
+
+
+<br/>
+<!-- ===================================================================== -->
+<h1>This is an added h1</h1>
+<h3>This was auto set to " Index "</h3>
+<p>Yep, an added p tag ...</p>
+<br />
+<!-- ===================================================================== -->
+
+
+
+
+
+<!-- this is dynamically created - subject to errors - weakly Typed-->
+<!-- this is an "in-line expression" using razor -->
+<!-- in-line automatically knows where C3 ends and html begins -->
+<!-- if you put a semicolon after ...Value - it would appear after the text output on screen -->
+<p>@ViewBag.CreatedViewBagValue</p>
+
+
+
+
+
+
+
+<!-- ===================================================================== -->
+<!-- Example of an explicit expression; requires letting razor know -->
+@{
+    <br />
+    <h3>This is an example of an explicit expression</h3>
+    var productId = 914;
+    <!-- this would create an email address rather than "ACME914" -->
+    <!--   <p>Product ID: ACME@productId</p>    -->
+    <!-- this is how to fix: -->
+    <p>Product ID: ACME@(productId)</p>
+
+    <p>Hey @name! Aren't @(day)s great days for a nap?</p>
+}
+
+
+
+
+
+
+<br/>
+<!-- ===================================================================== -->
+<h3>Using Razor syntax to output strongly typed list from Model into View</h3>
+
+<!-- notice the uppercase M in Model -->
+<!-- This is the Accessor (Model, M uppercase); -->
+<!--      how you get to what is passed into View() in the HomeContoller file  -->
+<!-- It is strongly Typed and will throw error if not done correctly --> 
+@foreach (var car in Model)
+{
+    <p>@car.Id -- @car.Make -- @car.Model</p>
+}
+
+
+
+
+
+
+<br/>
+<!-- ===================================================================== -->
+<h3>Methods fixing Child versus Children (pluralization)</h3>
+
+<!-- at-symbol with "helper" - helper is a razor keyword -->
+<!-- this is how to create a method in razor -->
+@helper pluralizeChildren(int childCount)  {   
+    @(childCount == 1 ? "child" : "children" );   }
+
+@{ 
+    var childCount = 2;
+    <p>I have @childCount @pluralizeChildren(childCount)</p>
+    childCount = 1;
+    <p>I have @childCount @pluralizeChildren(childCount)</p>
+}
+
+
+
+
+
+
+<br />
+<!-- ===================================================================== -->
+<h3>Another Example with multi-input parameters of helper methods and pluralization</h3>
+
+@helper pluralize(int amount, string singular, string plural)
+{
+    @(amount ==1 ? singular : plural)
+}
+
+@{ 
+    var crisesCount = 2;
+    <p>Ms. President, there @pluralize(crisesCount, 
+         "is a crisis", "are " +  
+         @crisesCount + " crises") you must deal with immediately.</p>
+
+    crisesCount = 1;
+    <p>
+        Ms. Governor, there @pluralize(crisesCount,
+         "is a crisis", "are " +
+         @crisesCount + " crises") you must deal with immediately.
+    </p>
+}
+
+
+
+
+
+
+
+<br />
+<!-- ===================================================================== -->
+<h3>Another Example, yep,  more ways to pluralize ... </h3>
+<p>
+    Ms. Mayor, there
+    @if (crisesCount ==1)
+    {
+        <span> is one crises </span>
+    }
+    else
+    {
+        <span> are @crisesCount crises</span>
+    }
+    you must deal with right now.
+
+</p>
+
+
+<!-- unless this is wrapped with the razor synax - REGARDLESS of where placed - it prints to screen -->
+@{
+    crisesCount = 2;
+}
+
+<p>
+    
+
+    Ms. Vice President, there
+    @if (crisesCount == 1)
+    {
+        <span> is one crises </span>
+    }
+    else
+    {
+        <span> are @crisesCount crises</span>
+    }
+    you must deal with right now.
+</p>
+
+
+
+
+<br/>
+<!-- ===================================================================== -->
+<!-- this is how to skip using span tags within C# block -->
+<!-- it's set to not print - so no accompaning h tags -->
+
+<p>
+    @{ 
+        var test = false;
+        if (test)
+        {
+            @: Display This copy without any html (span, p or h, etc) tagging
+        }
+    }
+</p>
+
+
+
+<br/>
+<!-- ===================================================================== -->
+<h3>And Loops ... </h3>
+<!-- example for loop -->
+
+@for (int i = 0; i < 5; i++)
+{
+    @i <br/>
+}
+
+@for (int i = 5; i > 0; i--)
+{
+    <p>@i</p>
+}
+<br />
+
+
+
+
+
+
+<br />
+<!-- ===================================================================== -->
+<h3>Escape characters - double strudel; Keywords: one strudel</h3>
+
+<!-- the at sign is also called the strudel! -->
+<!-- razor knows to ignore strudel in an email ... 
+    but how to use a handle thst starts with the at sign  -->
+<!-- USE DOUBLE STRUDEL -->
+@@SengeSterling
+<p>@@SengeSterlingCatAtLarge</p>
+
+
+<!-- How to use a KEYWORD for another purpose  -->
+Example was_Layout.cshtml ~line 25 where class had to be used with a proceeding strudel in front of class.
+<h4>SCARY how no quotes needed to show what's typed.</h4>
+
+
+
+
+
+
+
+
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+

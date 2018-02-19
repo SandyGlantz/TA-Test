@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KittyPizzaDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="Guid" Nullable="false" />
+    <Property Name="Size" Type="KittyPizzaDbModel.SizeType" Nullable="false" />
+    <Property Name="Crust" Type="KittyPizzaDbModel.CrustType" Nullable="false" />
+    <Property Name="Mouse" Type="Boolean" Nullable="false" />
+    <Property Name="Goldfish" Type="Boolean" Nullable="false" />
+    <Property Name="Catnip" Type="Boolean" Nullable="false" />
+    <Property Name="Grass" Type="Boolean" Nullable="false" />
+    <Property Name="TotalCost" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Zip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PaymentType" Type="KittyPizzaDbModel.PaymentType" Nullable="false" />
+    <Property Name="Completed" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="KittyPizzaDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="PizzaPriceLookupTables" EntityType="KittyPizzaDbModel.PizzaPriceLookupTable" />
+  </EntityContainer>
+  <EnumType Name="SizeType" a:ExternalTypeName="KittyPizza.DTO.Enums.SizeType" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="CrustType" a:ExternalTypeName="KittyPizza.DTO.Enums.CrustType" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="PaymentType" a:ExternalTypeName="KittyPizza.DTO.Enums.PaymentType" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EntityType Name="PizzaPriceLookupTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="SmallSizeCost" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="MediumSizeCost" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="LargeSizeCost" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="ThickCrustCost" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="ThinCrustCost" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="RegularCrustCost" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="MouseCost" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="GoldfishCost" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="CatnipCost" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+    <Property Name="GrassCost" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+  </EntityType>
+</Schema>

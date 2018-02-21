@@ -19,3 +19,29 @@ namespace ACME.Models
         public decimal Price { get; set; }
     }
 }
+
+// in vid 12 - data annnotations we did this ...
+// in vid 13 - preserving data annotation - we refreshed the Db and the whole page was wiped out :-/
+//     leaving the page above
+
+    // the way to work with this is PARTIAL CLASS ... this is a partial class, so we can create another
+    //     PARTIAL class which the auto-generated tt (entity model) won't write over.
+
+/*
+public partial class Product
+{
+    //this is using data annotation to change the column header display:
+    public System.Guid ProductId { get; set; }
+
+    [Display(Name = "Product Name")]
+    // If you place your cursor inside the () - there are other overloads
+    // copy this into Google to see all the different types of methods:
+    //     System.ComponentModel.DataAnnotations
+
+
+    // this was the original way the table column header was determined:
+    // public System.Guid ProductId { get; set; }
+    public string Name { get; set; } // this is used in Index.cshtml for table headers
+    public decimal Price { get; set; }
+}
+*/

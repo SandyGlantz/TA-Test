@@ -10,13 +10,35 @@
 
 <p>
     @Html.ActionLink("Create New V2", "Create")<br/>
+
+    <!-- NOTE to use Tooltip you also need to add in code on the _Layout
+        More Note! replace the dashes with underscores
+         -->
+    @Html.ActionLink("Create New V5 w/ Tooltip on hover", "Create", null, htmlAttributes: new { data_toggle = "tooltip", data_placement = "right", title = "Click here to create a new Product" })
+    <br/>
+
+    <!-- instructors version worked fine ... 
+            this won't recognize string  
+            but, instructor's version is not completely shown - maybe I missed something?????
+        -->
+    @*
+    @Html.ActionLink("Create New V6 w/ Dictionary", "Create", null,
+    new Dictionary<string, object> {
+        { "data-toggle", "tooltip" },
+        { "data-placement", "right" },
+        {"title", "Click here to create a new Product" }   }   <br/>
+    *@
+
+
+
+
     @Html.ActionLink("Create New V3", "Create", 
     new RouteValueDictionary(new { locale = "en-US", year = DateTime.Now.Year.ToString() }))
     <br/>
 
     @{ 
         // version 4:
-        // IDEA is to hover over V4 and see where the URL goes and what it displays
+        // IDEA is to hover over V4 on the page and see where the URL goes and what it displays
         var myDictionary = new Dictionary<string, object>();
 
         myDictionary.Add("First", "A");
@@ -37,8 +59,10 @@
 
 
 <table class="table">
-    <tr>
-        <th>
+    <tr>  <!-- These are the column headers -->
+        <th> <!-- They use the model 
+                 (Models> ACMEProductEntities.edmx> ACMEProductsEntities.tt> Product.cs
+                 to get the copy for the column header -->
             @Html.DisplayNameFor(model => model.Name)
         </th>
         <th>

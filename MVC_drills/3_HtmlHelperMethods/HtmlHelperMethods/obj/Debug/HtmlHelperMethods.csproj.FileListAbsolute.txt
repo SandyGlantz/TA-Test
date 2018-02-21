@@ -1,0 +1,37 @@
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\bin\HtmlHelperMethods.dll.config
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\bin\HtmlHelperMethods.dll
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\bin\HtmlHelperMethods.pdb
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Helpers.dll
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Mvc.dll
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Razor.dll
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Webpages.Deployment.dll
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Webpages.dll
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Webpages.Razor.dll
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Razor.xml
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Webpages.xml
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Webpages.Deployment.xml
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Webpages.Razor.xml
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Helpers.xml
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Mvc.xml
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\obj\Debug\HtmlHelperMethods.csprojResolveAssemblyReference.cache
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\obj\Debug\HtmlHelperMethods.dll
+c:\users\bob_000\documents\visual studio 2013\Projects\HtmlHelperMethods\HtmlHelperMethods\obj\Debug\HtmlHelperMethods.pdb
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\HtmlHelperMethods.dll.config
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\HtmlHelperMethods.dll
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\HtmlHelperMethods.pdb
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\Microsoft.Web.Infrastructure.dll
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Helpers.dll
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Mvc.dll
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Razor.dll
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Webpages.Deployment.dll
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Webpages.dll
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Webpages.Razor.dll
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Razor.xml
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Webpages.xml
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Webpages.Deployment.xml
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Webpages.Razor.xml
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Helpers.xml
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\bin\System.Web.Mvc.xml
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\obj\Debug\HtmlHelperMethods.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\obj\Debug\HtmlHelperMethods.dll
+\\Mac\Home\Documents\GitHub\TA_pc\MVC_drills\3_HtmlHelperMethods\HtmlHelperMethods\obj\Debug\HtmlHelperMethods.pdb
